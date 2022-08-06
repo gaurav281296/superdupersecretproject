@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi, shrink-to-fit=no">
+
+        <title>FinStack</title>
+        
+
+        <link rel="icon" type="image/x-icon" href="./static/logo.png">
+
+        
+        <link rel="canonical" href="https://www.getfinstack.in/">
+        <link href="./static/css" rel="stylesheet">
+        <link href="./static/bootstrap.min.css" rel="stylesheet">
+        <link href="./static/all.css" rel="stylesheet">
+
+        <style type="text/css">
+
+            html {
+                scroll-behavior: smooth;
+                font-size: 16px;
+                overflow-x: hidden;
+            }
+
+            body {
+              overflow-x: hidden;
+            }
+
+            .container {
+                max-width: 100%;
+            }
+
+            @media (min-width: 576px) {
+                .container {
+                    max-width: 540px;
+                }
+            }
+
+            @media (max-width: 576px) {
+                .navbar-brand img {
+                    max-width: 15rem!important;
+                }
+            }
+
+            @media (max-width: 600px) {
+                .sw-modal .sw-modal-container .sw-modal-iframe {
+                    width: 340px !important;
+                }
+            }
+
+            @media (max-width: 768px) {
+                .sw-modal .sw-modal-iframe {
+                    width: 520px !important;
+                }
+            }
+
+            @media (min-width: 768px) {
+                .container {
+                    max-width: 720px;
+                }
+            }
+
+            @media (min-width: 992px) {
+                .container {
+                    max-width: 960px;
+                }
+            }
+
+            @media (min-width: 1200px) {
+                .container {
+                    max-width: 1140px;
+                }
+            }
+
+            p, h1, h2, h3, h4, h5, small { white-space: pre-line; }
+
+            @media screen and (max-width: 768px) {
+              input, select, textarea {
+                font-size: 16px !important;
+              }
+            }
+
+            h1.sw-font-family-default,
+            h2.sw-font-family-default {
+                font-family: "Inter";
+            }
+
+            h1.sw-font-weight-default,
+            h2.sw-font-weight-default {
+                font-weight: 600;
+            }
+
+            h1.sw-text-color-default,
+            h2.sw-text-color-default {
+                color: #383B3D;
+            }
+
+            section.sw-font-family-default,
+            header.sw-font-family-default,
+            nav.sw-font-family-default,
+            footer.sw-font-family-default,
+            div.sw-font-family-default,
+            span.sw-font-family-default,
+            small.sw-font-family-default,
+            pre.sw-font-family-default,
+            p.sw-font-family-default,
+            b.sw-font-family-default,
+            li.sw-font-family-default,
+            ul.sw-font-family-default,
+            a.sw-font-family-default,
+            h3.sw-font-family-default,
+            h4.sw-font-family-default,
+            h5.sw-font-family-default,
+            h6.sw-font-family-default {
+                font-family: "Inter";
+            }
+
+            span.sw-font-weight-default,
+            li.sw-font-weight-default span,
+            small.sw-font-weight-default,
+            li.sw-font-weight-default small,
+            pre.sw-font-weight-default,
+            p.sw-font-weight-default,
+            h3.sw-font-weight-default,
+            h4.sw-font-weight-default,
+            h5.sw-font-weight-default,
+            h6.sw-font-weight-default {
+                font-weight: 300;
+            }
+
+            span.sw-text-color-default,
+            li.sw-text-color-default span,
+            small.sw-text-color-default,
+            li.sw-text-color-default small,
+            pre.sw-text-color-default,
+            p.sw-text-color-default,
+            div.sw-text-color-default,
+            h3.sw-text-color-default,
+            h4.sw-text-color-default,
+            h5.sw-text-color-default,
+            h6.sw-text-color-default {
+                color: #383B3D;
+            }
+
+            input.sw-font-family-default,
+            textarea.sw-font-family-default {
+                font-family: "Inter";
+            }
+
+            input.sw-font-weight-default,
+            textarea.sw-font-weight-default {
+                font-weight: 300;
+            }
+
+            .sw-font-family-default::-webkit-input-placeholder,
+            .sw-font-family-default::-moz-placeholder,
+            .sw-font-family-default:-ms-input-placeholder,
+            .sw-font-family-default:-moz-placeholder {
+                font-family: "Inter";
+            }
+
+            .sw-font-family-default::-webkit-input-placeholder,
+            .sw-font-family-default::-moz-placeholder,
+            .sw-font-family-default:-ms-input-placeholder,
+            .sw-font-family-default:-moz-placeholder {
+                font-weight: 300;
+            }
+
+            .sw-text-color-default[data-element='button'] {
+                color: #ffffff;
+            }
+
+            .sw-background-color-default[data-element='button'] {
+                background-color: #212121;
+            }
+
+            .sw-border-radius-default[data-element='button'] {
+                border-radius: .5rem;
+            }
+
+            /* Micromodal styles */
+            .sw-modal {
+                display: none;
+            }
+
+            .sw-modal.is-open {
+                display: block;
+            }
+
+            .sw-modal .sw-modal-overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.6);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 999;
+            }
+
+            .sw-modal .sw-modal-container {
+                background-color: #FFFFFF;
+                padding: 40px 10px 10px 10px;
+                overflow-y: auto;
+                box-sizing: border-box;
+                position: relative;
+            }
+
+            .sw-modal #sw-modal-content {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .sw-modal .sw-modal-close {
+                background: transparent;
+                border: 0;
+                position: absolute;
+                right: 5px;
+                top: 5px;
+            }
+
+            .sw-modal-close:focus {
+                outline: none;
+            }
+
+            .sw-modal .sw-modal-iframe {
+                border: none;
+            }
+
+            .sw-modal-close:before {
+                content: "\2715";
+            }
+
+            @keyframes rotation {
+                from {
+                    transform: rotate(0deg);
+                }
+                to {
+                    transform: rotate(359deg);
+                }
+            }
+
+            .sw-font-size-m { font-size: 1rem!important; } .sw-text-color-000000 { color: #000000!important; } .sw-font-family-default {  } .sw-font-weight-semibold { font-weight: 600!important; } .sw-letter-spacing-normal { letter-spacing: 0rem!important; } .sw-display-block { display: block!important; } .sw-padding-top-6xs { padding-top: 0.5rem!important; } .sw-padding-bottom-6xs { padding-bottom: 0.5rem!important; } .sw-padding-left-6xs { padding-left: 0.5rem!important; } .sw-padding-right-xs { padding-right: 2rem!important; } @media (hover: hover) { .hover\:sw-text-decoration-no-underline:hover { text-decoration: none!important; } } .active\:sw-background-color-transparent:active { background-color: transparent!important; } .sw-font-size-s { font-size: 0.875rem!important; } .sw-font-weight-normal { font-weight: 400!important; } .sw-display-flex { display: flex!important; } .sw-padding-top-7xs { padding-top: 0.25rem!important; } .sw-padding-bottom-7xs { padding-bottom: 0.25rem!important; } .sw-padding-left-7xs { padding-left: 0.25rem!important; } .sw-padding-right-7xs { padding-right: 0.25rem!important; } .sw-text-color-13324b { color: #13324b!important; } .sw-width-11xs { width: 2rem!important; } .sw-margin-right-7xs { margin-right: 0.25rem!important; } .sw-margin-left-7xs { margin-left: 0.25rem!important; } .sw-text-align-left { text-align: left!important; } .sw-text-color-default {  } .sw-border-radius-default {  } .sw-background-color-default {  } .sw-padding-left-2xs { padding-left: 1.5rem!important; } .sw-padding-right-2xs { padding-right: 1.5rem!important; } .sw-padding-top-5xs { padding-top: 0.75rem!important; } .sw-padding-bottom-5xs { padding-bottom: 0.75rem!important; } .sw-border-style-none { border-style: none!important; } .sw-border-width-xs { border-width: 1px!important; } .sw-border-color-000000 { border-color: #000000!important; } .sw-text-decoration-no-underline { text-decoration: none!important; } @media (hover: hover) { .hover\:sw-box-shadow-m:hover { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)!important; } } @media (min-width: 768px) { .m\:sw-margin-left-6xs { margin-left: 0.5rem!important; } } .sw-background-color-ffffff { background-color: #ffffff!important; } .sw-border-top-style-none { border-top-style: none!important; } .sw-border-top-width-xs { border-top-width: 1px!important; } .sw-border-top-color-000000 { border-top-color: #000000!important; } .sw-border-bottom-style-none { border-bottom-style: none!important; } .sw-border-bottom-width-xs { border-bottom-width: 1px!important; } .sw-border-bottom-color-000000 { border-bottom-color: #000000!important; } .sw-width-4xs { width: 10rem!important; } .sw-text-color-ffffff { color: #ffffff!important; } .sw-background-color-9ea5b4 { background-color: #9ea5b4!important; } .sw-border-style-solid { border-style: solid!important; } .sw-border-color-9ea5b4 { border-color: #9ea5b4!important; } .sw-background-attachment-scroll { background-attachment: scroll!important; } .sw-background-repeat-no-repeat { background-repeat: no-repeat!important; } .sw-background-position-center { background-position: center!important; } .sw-background-size-cover { background-size: cover!important; }  #home_header2 {   opacity: 0;   visibility: hidden; }  #data-content-vertical {   width: 100%;   flex-direction: column;   overflow-x: hidden; }  #vertical-holder {   display: flex; }  .home_header2-fixed-top {  position: fixed;  top: 0;  right: 0;  left: 0;  z-index: 1030;  box-shadow: 0 1px 7px rgba(0, 0, 0, 0.1); }  #home_header2 .navbar-nav .dropdown-menu {  border: 0;  box-shadow: 0 1px 3px #00000014, 0 10px 40px -10px #00000059;  min-width: 180px; }  #home_header2.navbar-light .profile-dropdown-toggle {    background-color: #88898b !important;    color: #ffffff!important; } #home_header2.navbar-dark .profile-dropdown-toggle {    background-color: #d7d8dd !important;    color: #302e2e!important;     } #home_header2 .navbar-nav .profile-letters {    background-image: none!important;    text-transform: uppercase;    font-weight: 400; } #home_header2 .profile-dropdown-toggle:hover {    box-shadow: 0 0 0 3px rgba(222, 235, 255, .9);    transition: all .3s ease-in-out; }  #home_header2 .nav-link.dropdown-toggle{      border-radius: 50%;      text-align: center;      line-height: 10px;      display: flex;      align-items: center;      justify-content: center;     }  #home_header2:not(.navbar-vertical) .dropdown-menu-profile {      left: -148px;      top: 25px;      border-radius: 0;      box-shadow: 0 1px 3px #00000014, 0 10px 40px -10px #00000059;      border: 0;     } #home_header2 .navbar-vertical .dropdown-menu-profile {      border-radius: 0;      box-shadow: 0 1px 3px #00000014, 0 10px 40px -10px #00000059;      border: 0;     } #home_header2 .dropdown-menu-profile a{      text-decoration: none;      border-bottom: 1px solid rgba(0,0,0,.15);      padding: 6px 12px;     }  #home_header2 .mobile-profile {    box-shadow: none !important;     } #home_header2 .mobile-profile a {    border-bottom: none !important;     } #home_header2 .dropdown-menu{      min-width: 11rem!important;     } #home_header2 .nav-link.dropdown-toggle:after{      display: none;     } #home_header2 .mob-menu-body .dropdown-menu-profile  {      border-top: 1px solid #dedede;     } #home_header2 .navbar-nav .links-dropdown a {  padding-left: 1.5rem !important; }  #home_header2 .toggle-button{  display: none; }  #home_header2 .mob-menu-header{  padding: 8px 24px;  display: flex;  justify-content: space-between; }  #home_header2 .mob-menu-body{  height: 90%;  position: relative;  overflow-y: auto; }  #home_header2 .navigation-section{  padding: 10px 24px; }  #home_header2 .navigation-section p a{  width: 100%; }  #home_header2 .buttons-section{      margin: 24px;      display: flex;      justify-content: flex-start; }  #home_header2 .dropdown-menu-profile:not(.mobile-profile) a:hover{    box-shadow: 0 1px 3px #00000014, 0 4px 5px -5px #00000059;   }  #home_header2 .arrow {  position: absolute;  right: 15px;  top: 5px;  display: inline-block;  width: 8px;  height: 8px;  border-left: 2px solid #29394c;  border-top: 2px solid #29394c;  transform: rotate(225deg);  transition: .2s linear;  margin-top: 10px; }  #home_header2 .link{  background: #f5f5f5;  padding: 3px 10px; }  #home_header2 .collapsed.link{  background: none; }  #home_header2 .collapsed .arrow {  transform: rotate(135deg); }  #home_header2 .buttons-section button{  margin-left: 0!important; }  #home_header2 .navbar-close i{  font-size: 24px;  margin-top: 10px;  margin-right: 3px;  cursor: pointer; }  #home_header2 .mob-menu-content{  display: none; } @media (max-width: 992px) {  #home_header2 .buttons-section {       margin-left: 24px;       margin-right: 0;       display: inline-block;      }  #home_header2 .buttons-section a {       margin-right: 10px;       margin-bottom: 16px;      }  #home_header2:not(.navbar-vertical) .desktop-menu{   display: none;  }   #home_header2 .toggle-button{   display: block;  }   #home_header2 .mob-menu-content{   display: block;   position: fixed;   z-index: 5;   width: 100%;   height: 100%;   opacity: 0;   top:0;   left: 0;   background: #fff;   -webkit-transition: ease-in all 0.5s;   transition: ease-in all 0.5s;   -webkit-transform: translateX(200%);   -ms-transform: translateX(200%);   transform: translateX(200%);   overflow-y: hidden;  }   #home_header2 .mob-menu-content.show{   display: block;   opacity: 1;   /*left: 0;*/   -webkit-transition: ease-in all 0.5s;   transition: ease-in all 0.5s;   -webkit-transform: translateX(0);   -ms-transform: translateX(0);   transform: translateX(0);   }   #home_header2 a.dropdown-item {   padding-left: 1.5rem !important;  } } .navbar-dark .navbar-toggler-icon {  cursor: pointer;  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 1.0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important; }  .navbar-light .navbar-toggler-icon {  cursor: pointer;  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(0, 0, 0, 1.0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important; }  #home_header2.navbar-vertical .container > .navbar-brand {      display: none;    }  #home_header2.navbar-vertical {      align-items: normal;      width: 300px;      flex-shrink: 0;      overflow-y: auto;      overflow-x: hidden;      height: 100vh;      position: sticky;      top: 0;    }  #home_header2.navbar-vertical .mob-menu-content {      display: block;      z-index: 5;      height: 100%;      background: #fff;      overflow-y: hidden;      width: 300px;    }  #home_header2.navbar-vertical .mob-menu-body {      display: flex;      flex-direction: column;      justify-content: space-between;      overflow-y: auto;    }  #home_header2.navbar-vertical .dropdown-menu-profile {      padding-bottom: 40px;    }  #home_header2.navbar-vertical > .container {      align-items: normal;    }  #home_header2.navbar-vertical .mob-menu-body .navigation-section{      flex: 1; }  #home_header2.navbar-vertical .buttons-section {      margin: 0;      flex-direction: column;      padding: 40px 10px 40px 0;    }  #home_header2.navbar-vertical .buttons-section a {      margin: 0    }  #home_header2.navbar-vertical .buttons-section a:not(:last-child) {      margin-bottom: 10px;    }  #home_header2.navbar-vertical .container > .navbar-brand {      display: none;    }  #home_header2.navbar-vertical {      align-items: normal;      width: 300px;      flex-shrink: 0;      overflow-y: auto;      overflow-x: hidden;      height: 100vh;      position: sticky;      top: 0;    }  #home_header2.navbar-vertical .mob-menu-content {      display: block;      z-index: 5;      height: 100%;      background: #fff;      width: 300px;    }  #home_header2.navbar-vertical .mob-menu-body, #home_header2.navbar-vertical .simplebar-content {      display: flex;      flex-direction: column;      justify-content: space-between;      height: 94%;      overflow-y: auto;    }  #home_header2.navbar-vertical .vertical-profile {      margin-bottom: 23px;    }  #home_header2.navbar-vertical > .container {      align-items: normal;    }  #home_header2.navbar-vertical .mob-menu-body .navigation-section{      flex: 1 }  #home_header2.navbar-vertical .buttons-section {      margin: 0;      flex-direction: column;      padding: 40px 10px 20px 0;    }  #home_header2.navbar-vertical .buttons-section a {      margin: 0    }  #home_header2.navbar-vertical .buttons-section a:not(:last-child) {      margin-bottom: 10px;    }  .simplebar-scrollbar::before {   background-color: #aaa !important; } 
+.sw-font-size-m { font-size: 1rem!important; } .sw-text-color-default {  } .sw-font-family-default {  } .sw-font-weight-semibold { font-weight: 600!important; } .sw-border-radius-default {  } .sw-background-color-default {  } .sw-padding-left-s { padding-left: 2.5rem!important; } .sw-padding-right-s { padding-right: 2.5rem!important; } .sw-padding-top-5xs { padding-top: 0.75rem!important; } .sw-padding-bottom-5xs { padding-bottom: 0.75rem!important; } .sw-border-style-none { border-style: none!important; } .sw-border-width-xs { border-width: 1px!important; } .sw-border-color-000000 { border-color: #000000!important; } .sw-letter-spacing-normal { letter-spacing: 0rem!important; } .sw-text-decoration-no-underline { text-decoration: none!important; } @media (hover: hover) { .hover\:sw-text-decoration-no-underline:hover { text-decoration: none!important; } } @media (hover: hover) { .hover\:sw-box-shadow-m:hover { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)!important; } } .sw-margin-right-4xs { margin-right: 1rem!important; } .sw-display-inline-block { display: inline-block!important; } .sw-background-color-ffffff { background-color: #ffffff!important; } .sw-padding-top-2xl { padding-top: 6rem!important; } .sw-padding-bottom-2xl { padding-bottom: 6rem!important; } .sw-border-top-style-none { border-top-style: none!important; } .sw-border-top-width-xs { border-top-width: 1px!important; } .sw-border-top-color-000000 { border-top-color: #000000!important; } .sw-border-bottom-style-none { border-bottom-style: none!important; } .sw-border-bottom-width-xs { border-bottom-width: 1px!important; } .sw-border-bottom-color-000000 { border-bottom-color: #000000!important; } .sw-font-size-4xl { font-size: 2.25rem!important; } .sw-font-weight-default {  } .sw-padding-top-none { padding-top: 0rem!important; } .sw-padding-bottom-none { padding-bottom: 0rem!important; } .sw-line-height-normal { line-height: 1.5!important; } .sw-text-color-ef3075 { color: #ef3075!important; } .sw-font-size-xl { font-size: 1.25rem!important; } .sw-padding-bottom-3xs { padding-bottom: 1.25rem!important; } .sw-percentage-width-full { width: 100%!important; } .sw-border-radius-none { border-radius: 0rem!important; } .sw-font-size-l { font-size: 1.125rem!important; } .sw-padding-left-none { padding-left: 0rem!important; } .sw-padding-right-none { padding-right: 0rem!important; } .sw-display-flex { display: flex!important; } .sw-align-items-center { align-items: center!important; } .sw-background-repeat-no-repeat { background-repeat: no-repeat!important; } .sw-background-size-cover { background-size: cover!important; } .sw-background-position-center { background-position: center!important; } .sw-background-attachment-scroll { background-attachment: scroll!important; }  #hero2 .sw-btn-success {  background: #22bc66 !important;  color: #fff !important; }   #hero2 .sw-btn-success .fa-check {  display: inline-block !important;  color: #fff !important;  position: relative !important;  left: 0.5rem !important; }  #hero2 .sw-input-invalid {  border: 2px solid red !important; }  #hero2 .sw-btn-spinner {  width: 1rem !important;  height: 1rem !important;  margin-left: 0.5rem !important; } #hero2 .hero-video-button {  color: inherit; } h1{  display: inline-block; }   #hero2 #sw-form-success-message {      padding-left: 0;      padding-right: 0;     }  /*Removes cursor that comes with typed.js*/ #hero2 .typed-cursor{    opacity: 0;    display: none; }   /*Custom cursor animation*/ @keyframes blink{  0% { opacity:1; }  50% { opacity:0; }  100% { opacity:1; } } @-webkit-keyframes blink{  0% { opacity:1; }  50% { opacity:0; }  100% { opacity:1; } } @-moz-keyframes blink{  0% { opacity:1; }  50% { opacity:0; }  100% { opacity:1; } }  @media (max-width: 991px) { #hero2 .buttons-container {       justify-content: center!important;      } }  @media (max-width: 767px) {  #hero2 .hero-button {       margin-bottom: 16px;       margin-right: 0!important;      } #hero2 .buttons-container {      flex-direction: column!important;     } } 
+.sw-width-3xs { width: 12rem!important; } .sw-height-3xs { height: 12rem!important; } .sw-margin-bottom-2xs { margin-bottom: 1.5rem!important; } .sw-font-size-l { font-size: 1.125rem!important; } .sw-text-color-default {  } .sw-font-family-default {  } .sw-font-weight-medium { font-weight: 500!important; } .sw-letter-spacing-normal { letter-spacing: 0rem!important; } .sw-margin-bottom-6xs { margin-bottom: 0.5rem!important; } .sw-font-size-m { font-size: 1rem!important; } .sw-font-weight-default {  } .sw-line-height-normal { line-height: 1.5!important; } .sw-font-size-xs { font-size: 0.75rem!important; } .sw-text-color-2977c9 { color: #2977c9!important; } .sw-font-weight-semibold { font-weight: 600!important; } .sw-margin-top-none { margin-top: 0rem!important; } .sw-margin-bottom-none { margin-bottom: 0rem!important; } .sw-text-decoration-no-underline { text-decoration: none!important; } @media (hover: hover) { .hover\:sw-text-decoration-no-underline:hover { text-decoration: none!important; } } .sw-display-inline-block { display: inline-block!important; } .sw-background-color-fafafa { background-color: #fafafa!important; } .sw-padding-top-2xl { padding-top: 6rem!important; } .sw-padding-bottom-2xl { padding-bottom: 6rem!important; } .sw-border-top-style-none { border-top-style: none!important; } .sw-border-top-width-xs { border-top-width: 1px!important; } .sw-border-top-color-000000 { border-top-color: #000000!important; } .sw-border-bottom-style-none { border-bottom-style: none!important; } .sw-border-bottom-width-xs { border-bottom-width: 1px!important; } .sw-border-bottom-color-000000 { border-bottom-color: #000000!important; } .sw-font-size-4xl { font-size: 2.25rem!important; } .sw-padding-top-none { padding-top: 0rem!important; } .sw-padding-bottom-4xs { padding-bottom: 1rem!important; } .sw-font-size-xl { font-size: 1.25rem!important; } .sw-padding-bottom-3xs { padding-bottom: 1.25rem!important; } .sw-background-repeat-no-repeat { background-repeat: no-repeat!important; } .sw-background-size-cover { background-size: cover!important; } .sw-background-position-center { background-position: center!important; } .sw-background-attachment-scroll { background-attachment: scroll!important; }  
+.sw-font-size-l { font-size: 1.125rem!important; } .sw-text-color-default {  } .sw-font-family-default {  } .sw-font-weight-medium { font-weight: 500!important; } .sw-letter-spacing-normal { letter-spacing: 0rem!important; } .sw-margin-bottom-6xs { margin-bottom: 0.5rem!important; } .sw-margin-top-none { margin-top: 0rem!important; } .sw-font-size-m { font-size: 1rem!important; } .sw-font-weight-default {  } .sw-line-height-normal { line-height: 1.5!important; } .sw-percentage-width-full { width: 100%!important; } .sw-border-style-none { border-style: none!important; } .sw-border-width-xs { border-width: 1px!important; } .sw-border-color-000000 { border-color: #000000!important; } .sw-border-radius-none { border-radius: 0rem!important; } .sw-background-color-e3f9ff { background-color: #e3f9ff!important; } .sw-padding-top-2xl { padding-top: 6rem!important; } .sw-padding-bottom-2xl { padding-bottom: 6rem!important; } .sw-border-top-style-none { border-top-style: none!important; } .sw-border-top-width-xs { border-top-width: 1px!important; } .sw-border-top-color-000000 { border-top-color: #000000!important; } .sw-border-bottom-style-none { border-bottom-style: none!important; } .sw-border-bottom-width-xs { border-bottom-width: 1px!important; } .sw-border-bottom-color-000000 { border-bottom-color: #000000!important; } .sw-font-size-4xl { font-size: 2.25rem!important; } .sw-text-color-000000 { color: #000000!important; } .sw-padding-top-none { padding-top: 0rem!important; } .sw-padding-bottom-4xs { padding-bottom: 1rem!important; } .sw-font-size-xl { font-size: 1.25rem!important; } .sw-padding-bottom-m { padding-bottom: 3rem!important; } .sw-background-repeat-no-repeat { background-repeat: no-repeat!important; } .sw-background-size-cover { background-size: cover!important; } .sw-background-position-center { background-position: center!important; } .sw-background-attachment-scroll { background-attachment: scroll!important; } .sw-font-size-2xl { font-size: 1.5rem!important; } .sw-border-color-ffffff { border-color: #ffffff!important; }  #feature3 .s-feature-box{  cursor: pointer;  padding: 8px 24px;  border-left: 4px solid transparent;  transition: .3s; } #feature3 .s-feature-box:hover{  box-shadow: 3px 3px 15px 0 rgba(186,186,186,.15);  background: #f8f8f8;  border-left: 4px solid #e5e5e5 } #feature3 .s-feature-box.active{  box-shadow: 3px 3px 15px 0 rgba(186,186,186,.15);  border-left: 4px solid #cccccc }  @media (max-width: 767px) {  #feature3-display-img{   display: none!important;  }    #feature3 .s-feature-box{   margin-bottom: 24px;  }   #feature3 .s-feature-box.active{   border-left: 4px solid transparent;   box-shadow: none !important;  }   #feature3 .s-feature-box:hover{   box-shadow: none !important;   background: none !important;   border-left: 4px solid transparent;  } }  
+.sw-font-size-m { font-size: 1rem!important; } .sw-text-color-default {  } .sw-font-family-default {  } .sw-font-weight-medium { font-weight: 500!important; } .sw-background-color-f9fafb { background-color: #f9fafb!important; } .sw-letter-spacing-normal { letter-spacing: 0rem!important; } .sw-padding-left-4xs { padding-left: 1rem!important; } .sw-padding-top-4xs { padding-top: 1rem!important; } .sw-padding-bottom-4xs { padding-bottom: 1rem!important; } .sw-text-decoration-no-underline { text-decoration: none!important; } .sw-display-block { display: block!important; } .sw-border-bottom-style-solid { border-bottom-style: solid!important; } .sw-border-bottom-width-xs { border-bottom-width: 1px!important; } .sw-border-bottom-color-f1f2f3 { border-bottom-color: #f1f2f3!important; } .sw-cursor-pointer { cursor: pointer!important; } .sw-font-weight-normal { font-weight: 400!important; } .sw-background-color-ffffff { background-color: #ffffff!important; } .sw-line-height-normal { line-height: 1.5!important; } .sw-padding-right-4xs { padding-right: 1rem!important; } .sw-margin-bottom-none { margin-bottom: 0rem!important; } .sw-padding-top-2xl { padding-top: 6rem!important; } .sw-padding-bottom-2xl { padding-bottom: 6rem!important; } .sw-border-top-style-none { border-top-style: none!important; } .sw-border-top-width-xs { border-top-width: 1px!important; } .sw-border-top-color-000000 { border-top-color: #000000!important; } .sw-border-bottom-style-none { border-bottom-style: none!important; } .sw-border-bottom-color-000000 { border-bottom-color: #000000!important; } .sw-font-size-4xl { font-size: 2.25rem!important; } .sw-font-weight-default {  } .sw-padding-top-none { padding-top: 0rem!important; } .sw-font-size-xl { font-size: 1.25rem!important; } .sw-padding-bottom-3xs { padding-bottom: 1.25rem!important; }   #faq1 .sw-accordion-border {  border: 1px solid #f1f2f3; }  #faq1 .arrow {  position: absolute;  right: 39px;  display: inline-block;  width: 6px;  height: 6px;  border-left: 1px solid #29394c;  border-top: 1px solid #29394c;  transform: rotate(45deg);  transition: .2s linear;  margin-top: 10px; }  #faq1 .collapsed .arrow {  transform: rotate(-135deg); }
+.sw-font-size-m { font-size: 1rem!important; } .sw-text-color-default {  } .sw-font-family-default {  } .sw-font-weight-semibold { font-weight: 600!important; } .sw-border-radius-default {  } .sw-background-color-default {  } .sw-padding-left-l { padding-left: 4rem!important; } .sw-padding-right-l { padding-right: 4rem!important; } .sw-padding-top-5xs { padding-top: 0.75rem!important; } .sw-padding-bottom-5xs { padding-bottom: 0.75rem!important; } .sw-border-style-none { border-style: none!important; } .sw-border-width-xs { border-width: 1px!important; } .sw-border-color-000000 { border-color: #000000!important; } .sw-letter-spacing-normal { letter-spacing: 0rem!important; } .sw-text-decoration-no-underline { text-decoration: none!important; } @media (hover: hover) { .hover\:sw-text-decoration-no-underline:hover { text-decoration: none!important; } } @media (hover: hover) { .hover\:sw-box-shadow-m:hover { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)!important; } } .sw-margin-bottom-6xs { margin-bottom: 0.5rem!important; } .sw-display-inline-block { display: inline-block!important; } .sw-margin-left-7xs { margin-left: 0.25rem!important; } .sw-margin-right-7xs { margin-right: 0.25rem!important; } .sw-background-color-ff619b { background-color: #ff619b!important; } .sw-padding-top-2xl { padding-top: 6rem!important; } .sw-padding-bottom-2xl { padding-bottom: 6rem!important; } .sw-border-top-style-none { border-top-style: none!important; } .sw-border-top-width-xs { border-top-width: 1px!important; } .sw-border-top-color-000000 { border-top-color: #000000!important; } .sw-border-bottom-style-none { border-bottom-style: none!important; } .sw-border-bottom-width-xs { border-bottom-width: 1px!important; } .sw-border-bottom-color-000000 { border-bottom-color: #000000!important; } .sw-border-radius-2xl { border-radius: 1rem!important; } .sw-box-shadow-none { box-shadow: none!important; } .sw-padding-top-xl { padding-top: 5rem!important; } .sw-padding-bottom-xl { padding-bottom: 5rem!important; } .sw-font-size-4xl { font-size: 2.25rem!important; } .sw-text-color-fff { color: #fff!important; } .sw-font-weight-bold { font-weight: 700!important; } .sw-padding-top-none { padding-top: 0rem!important; } .sw-padding-bottom-4xs { padding-bottom: 1rem!important; } .sw-line-height-normal { line-height: 1.5!important; } .sw-font-size-l { font-size: 1.125rem!important; } .sw-font-weight-thin { font-weight: 200!important; } .sw-padding-bottom-3xs { padding-bottom: 1.25rem!important; } .sw-background-repeat-no-repeat { background-repeat: no-repeat!important; } .sw-background-size-cover { background-size: cover!important; } .sw-background-position-center { background-position: center!important; } .sw-background-attachment-scroll { background-attachment: scroll!important; }   @media (max-width: 576px) {  #cta1 .box-container {   border-radius: 0!important;  }  #cta1 a{       width: 80%;      } } 
+.sw-text-color-000000 { color: #000000!important; } .sw-font-size-m { font-size: 1rem!important; } .sw-width-11xs { width: 2rem!important; } .sw-display-inline-block { display: inline-block!important; } .sw-font-family-default {  } .sw-font-weight-semibold { font-weight: 600!important; } .sw-letter-spacing-normal { letter-spacing: 0rem!important; } .sw-background-color-ffffff { background-color: #ffffff!important; } .sw-padding-top-2xl { padding-top: 6rem!important; } .sw-padding-bottom-2xl { padding-bottom: 6rem!important; } .sw-border-top-style-none { border-top-style: none!important; } .sw-border-top-width-xs { border-top-width: 1px!important; } .sw-border-top-color-000000 { border-top-color: #000000!important; } .sw-border-bottom-style-none { border-bottom-style: none!important; } .sw-border-bottom-width-xs { border-bottom-width: 1px!important; } .sw-border-bottom-color-000000 { border-bottom-color: #000000!important; } .sw-text-color-default {  } .sw-font-weight-default {  } .sw-padding-top-none { padding-top: 0rem!important; } .sw-padding-bottom-3xs { padding-bottom: 1.25rem!important; } .sw-display-block { display: block!important; } .sw-margin-top-3xs { margin-top: 1.25rem!important; } .sw-margin-bottom-3xs { margin-bottom: 1.25rem!important; } .sw-border-top-style-solid { border-top-style: solid!important; } .sw-border-top-color-cccccc { border-top-color: #cccccc!important; } .sw-width-4xs { width: 10rem!important; }  
+
+        </style>
+
+        <link rel="preconnect" href="https://fonts.gstatic.com/">
+        <link href="./static/css2" rel="stylesheet">
+
+        <script data-iub-purposes="2">
+          window.$crisp= window.$crisp || [];
+          window.CRISP_WEBSITE_ID="<script type='text/javascript'>"
+          window.$crisp=[];
+          window.CRISP_WEBSITE_ID="1a5964f6-089c-4e90-ba42-d8ecb0d01f89";
+          (
+            function() {
+              d=document;
+              s=d.createElement("script");
+              s.src="https://client.crisp.chat/l.js";
+              s.async=1;
+              d.getElementsByTagName("head")[0].appendChild(s);
+            }
+          )();
+          </script>
+          <link type="text/css" rel="Stylesheet" href="./static/simplebar.css">
+          <script type="text/javascript" src="./static/simplebar.min.js"></script>
+          <script type="text/javascript" src="./static/typed.js@2.0.11"></script>
+          <script type="text/javascript" src="./static/lity.min.js"></script>
+          <link type="text/css" rel="Stylesheet" href="./static/lity.min.css"><style type="text/css">
+@font-face {
+  font-weight: 400;
+  font-style:  normal;
+  font-family: 'Circular-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Book-cd7d2bcec649b1243839a15d5eb8f0a3.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 500;
+  font-style:  normal;
+  font-family: 'Circular-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Medium-d74eac43c78bd5852478998ce63dceb3.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 700;
+  font-style:  normal;
+  font-family: 'Circular-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Bold-83b8ceaf77f49c7cffa44107561909e4.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 900;
+  font-style:  normal;
+  font-family: 'Circular-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Black-bf067ecb8aa777ceb6df7d72226febca.woff2') format('woff2');
+}</style></head><body>";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();<!-- Global site tag (gtag.js) - Google Analytics --><script data-iub-purposes="4" async="" src="./static/js"></script><script data-iub-purposes="4">window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-N3Z6ZNM0EJ', { 'anonymize_ip': true });</script>
+
+        
+
+        <script>window['application_context'] = {}; window['application_context']['policies'] ={"supportedNumberOfDomains":1,"supportedNumberOfCollaborators":1,"supportedNumberOfMembershipUsers":5,"supportedNumberOfAirtableRecords":200,"hasCustomCodeSupport":false,"hasSamlAuthenticationSupport":false,"hasOpenIdAuthenticationSupport":false,"hasEmbedBlockSupport":false,"isSoftrBrandingVisible":false,"hasTransferOwnershipSupport":false,"hasUserLastSeenSupport":false,"hasChartsSupport":false,"hasKanbanSupport":false,"hasMapSupport":false,"hasEditAirtableRecordsSupport":false,"hasMultiGroupEditAirtableRecordsSupport":false,"hasCalendarSupport":false,"hasPwaSupport":false}; </script>
+
+        <style>
+ .sw-font-size-5xl {
+    font-size: 3rem;
+  }
+  .sw-font-size-4xl {
+    font-size: 2.25rem;
+  }
+</style>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    if($(window).width() < 768) {
+       $('h1.sw-font-size-10xl').removeClass('sw-font-size-10xl').addClass('sw-font-size-5xl');
+       $('h1.sw-font-size-9xl').removeClass('sw-font-size-9xl').addClass('sw-font-size-5xl');
+       $('h1.sw-font-size-8xl').removeClass('sw-font-size-8xl').addClass('sw-font-size-5xl');
+       $('h1.sw-font-size-7xl').removeClass('sw-font-size-7xl').addClass('sw-font-size-5xl');
+       $('h1.sw-font-size-6xl').removeClass('sw-font-size-6xl').addClass('sw-font-size-4xl');
+       $('h2.sw-font-size-10xl').removeClass('sw-font-size-10xl').addClass('sw-font-size-5xl');
+       $('h2.sw-font-size-9xl').removeClass('sw-font-size-9xl').addClass('sw-font-size-5xl');
+       $('h2.sw-font-size-8xl').removeClass('sw-font-size-8xl').addClass('sw-font-size-5xl');
+       $('h2.sw-font-size-7xl').removeClass('sw-font-size-7xl').addClass('sw-font-size-5xl');
+       $('h2.sw-font-size-6xl').removeClass('sw-font-size-6xl').addClass('sw-font-size-4xl');
+       $('div.sw-font-size-10xl').removeClass('sw-font-size-10xl').addClass('sw-font-size-5xl');
+       $('div.sw-font-size-9xl').removeClass('sw-font-size-9xl').addClass('sw-font-size-5xl');
+       $('div.sw-font-size-8xl').removeClass('sw-font-size-8xl').addClass('sw-font-size-5xl');
+       $('div.sw-font-size-7xl').removeClass('sw-font-size-7xl').addClass('sw-font-size-5xl');
+       $('div.sw-font-size-6xl').removeClass('sw-font-size-6xl').addClass('sw-font-size-4xl');
+       $('p.sw-font-size-10xl').removeClass('sw-font-size-10xl').addClass('sw-font-size-5xl');
+       $('p.sw-font-size-9xl').removeClass('sw-font-size-9xl').addClass('sw-font-size-5xl');
+       $('p.sw-font-size-8xl').removeClass('sw-font-size-8xl').addClass('sw-font-size-5xl');
+       $('p.sw-font-size-7xl').removeClass('sw-font-size-7xl').addClass('sw-font-size-5xl');
+       $('p.sw-font-size-6xl').removeClass('sw-font-size-6xl').addClass('sw-font-size-4xl');
+       $('span.sw-font-size-10xl').removeClass('sw-font-size-10xl').addClass('sw-font-size-5xl');
+       $('span.sw-font-size-9xl').removeClass('sw-font-size-9xl').addClass('sw-font-size-5xl');
+       $('span.sw-font-size-8xl').removeClass('sw-font-size-8xl').addClass('sw-font-size-5xl');
+       $('span.sw-font-size-7xl').removeClass('sw-font-size-7xl').addClass('sw-font-size-5xl');
+       $('span.sw-font-size-6xl').removeClass('sw-font-size-6xl').addClass('sw-font-size-4xl');
+    }
+  });
+</script>
+
+        
+
+        <script>window['is401Page'] = false; </script>
+        
+
+        <script>
+            /** Bugfix on multiple ?recordId= issue **/
+            setInterval(function() {
+                $('section a').each(function() {
+                    const href = $(this).attr('href');
+                    if(href && href.includes('?recordId=')) {
+                        const countOfRecords = (href.match(/\?recordId=/g) || []).length;
+                        if(countOfRecords > 1) {
+                            const index = href.lastIndexOf('?recordId=');
+                            const cleanedHref = href.substring(0, index);
+                            $(this).attr('href', cleanedHref);
+                        }
+                    }
+                });
+            }, 1000);
+        </script>
+
+        <script>
+            /** Image lineup on mobile **/
+            document.addEventListener("DOMContentLoaded", function() {
+                function changeImageDirectionsOnMobile() {
+
+                    const classListSection = $('body>div>section').attr('class').split(/\s+/);
+                    const textClassSection = classListSection.find(cls => cls.startsWith('feature'));
+
+                    const classListHeader = $('body>div>header').attr('class').split(/\s+/);
+                    const textClassHeader = classListHeader.find(cls => cls.startsWith('hero'));
+
+                    /*If FEATURE block*/
+                    if (textClassSection) {
+                        findRowsWidthImageAndReverse(textClassSection)
+                    }
+
+                    /*If HERO block*/
+                    if (textClassHeader) {
+                        findRowsWidthImageAndReverse(textClassHeader)
+                    }
+                }
+
+                function findRowsWidthImageAndReverse(textClass) {
+                    const rowsWithImages = $('.' + textClass + ' .row.align-items-center').has('img').toArray();
+                    const rowsWithLeftSideImages = rowsWithImages.filter(row => {
+                        return $(row).children().first().children().first().prop("tagName") === 'IMG';
+                    });
+
+
+                    rowsWithLeftSideImages.forEach(row => {
+                        if ($(window).width() <= 768) {
+                            row.classList.add('flex-column-reverse')
+                        }
+                    });
+                }
+
+                if ($(window).width() <= 768) {
+                    changeImageDirectionsOnMobile();
+                }
+            });
+
+            /** BG Size on mobile **/
+            document.addEventListener("DOMContentLoaded", function() {
+                if($(window).width() <= 768) {
+                    var element = $('section.sw-background-size-auto, header.sw-background-size-auto');
+                    element.removeClass('sw-background-size-auto');
+                    element.css('background-size', 'cover');
+
+                    $('section.sw-background-attachment-fixed, header.sw-background-attachment-fixed').removeClass('sw-background-attachment-fixed');
+                }
+            });
+
+            /** Disable zoom on mobile **/
+            document.addEventListener("DOMContentLoaded", function() {
+               if($(window).width() <= 768) {
+                   $('input.sw-font-size-s').removeClass('sw-font-size-s');
+                   $('textarea.sw-font-size-s').removeClass('sw-font-size-s');
+                   $('select.sw-font-size-s').removeClass('sw-font-size-s');
+               }
+           });
+
+        </script>
+    
+        <div data-appid="93be98b2-93cb-40a6-8f06-baa0883d011d" data-pageid="3ff20a57-15e6-4447-82ee-fbadcdee76f4" class="content">
+          <nav id="home_header2" data-block-version="2.2.5" data-block-id="241a44f2-13c6-475e-8898-f68608053466" data-block-updated="" class="home_header2-fixed-top navbar nav navbar-expand-lg navbar-light header1-241a44f2-13c6-475e-8898-f68608053466 sw-background-color-ffffff sw-padding-top-6xs sw-padding-bottom-6xs sw-border-top-style-none sw-border-top-width-xs sw-border-top-color-000000 sw-border-bottom-style-none sw-border-bottom-width-xs sw-border-bottom-color-000000" style="opacity: 1; visibility: visible;">
+          <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="https://www.getfinstack.in/">
+              <img class="sw-width-4xs " src="./static/1eec4b6e-49f3-4882-b1b5-011cf3976fe2.png" alt=""> 
+            </a>
+            <div class="desktop-menu text-center justify-content-end">
+              <ul class="navbar-nav align-items-center flex-row one-button">
+                <li class="nav-item ">
+                  <a target="" class="position-relative  sw-font-size-m sw-text-color-000000 sw-font-family-default sw-font-weight-semibold sw-letter-spacing-normal sw-display-block sw-padding-top-6xs sw-padding-bottom-6xs sw-padding-left-6xs sw-padding-right-xs hover:sw-text-decoration-no-underline active:sw-background-color-transparent" href="https://www.getfinstack.in/#hero2">     Home</a>
+                  <div class="border-0 dropdown-menu links-dropdown" aria-labelledby="navbarDropdown-0" style="background-color: rgb(255, 255, 255);"></div>
+                </li>
+                <li class="nav-item ">
+                  <a target="" class="position-relative  sw-font-size-m sw-text-color-000000 sw-font-family-default sw-font-weight-semibold sw-letter-spacing-normal sw-display-block sw-padding-top-6xs sw-padding-bottom-6xs sw-padding-left-6xs sw-padding-right-xs hover:sw-text-decoration-no-underline active:sw-background-color-transparent" href="https://www.getfinstack.in/#feature-grid2">Why Us</a>
+                  <div class="border-0 dropdown-menu links-dropdown" aria-labelledby="navbarDropdown-1" style="background-color: rgb(255, 255, 255);"></div>
+                </li>
+                <li class="nav-item ">
+                  <a target="" class="position-relative  sw-font-size-m sw-text-color-000000 sw-font-family-default sw-font-weight-semibold sw-letter-spacing-normal sw-display-block sw-padding-top-6xs sw-padding-bottom-6xs sw-padding-left-6xs sw-padding-right-xs hover:sw-text-decoration-no-underline active:sw-background-color-transparent" href="https://www.getfinstack.in/#feature3">Solution</a>
+                  <div class="border-0 dropdown-menu links-dropdown" aria-labelledby="navbarDropdown-2" style="background-color: rgb(255, 255, 255);"></div>
+                </li>
+                <li class="nav-item ">
+                  <a target="" class="position-relative  sw-font-size-m sw-text-color-000000 sw-font-family-default sw-font-weight-semibold sw-letter-spacing-normal sw-display-block sw-padding-top-6xs sw-padding-bottom-6xs sw-padding-left-6xs sw-padding-right-xs hover:sw-text-decoration-no-underline active:sw-background-color-transparent" href="https://www.getfinstack.in/#faq1">FAQ</a>
+                  <div class="border-0 dropdown-menu links-dropdown" aria-labelledby="navbarDropdown-3" style="background-color: rgb(255, 255, 255);"></div>
+                </li>
+                <li class="nav-item pt-lg-0 pt-3">
+                  <a data-element="button" target="" class="sw-font-size-m sw-text-color-default sw-font-family-default sw-font-weight-semibold sw-border-radius-default sw-background-color-default sw-padding-left-2xs sw-padding-right-2xs sw-padding-top-5xs sw-padding-bottom-5xs sw-border-style-none sw-border-width-xs sw-border-color-000000 sw-letter-spacing-normal sw-text-decoration-no-underline hover:sw-text-decoration-no-underline hover:sw-box-shadow-m sw-display-block m:sw-margin-left-6xs" href="https://calendly.com/finstack-team/meet-with-finstack-founders">Contact Sales</a>
+                </li>
+              </ul>  
+            </div>
+            <!-- mobile toggle -->
+            <div class="toggle-button">
+              <span class="navbar-toggler-icon"></span>
+            </div>
+            <div class="mob-menu-content" style="background-color: rgb(255, 255, 255);">
+              <div class="mob-menu-header">
+                <a class="navbar-brand" href="https://www.getfinstack.in/">
+                  <img class="sw-width-4xs" src="./static/1eec4b6e-49f3-4882-b1b5-011cf3976fe2.png" alt="">
+                </a>
+                <span class="navbar-close">
+                  <i class="fa fa-fw fa-times" aria-hidden="true"></i>
+                </span>
+              </div>
+                <div class="mob-menu-body" data-simplebar="init">
+                <div class="simplebar-wrapper" style="margin: 0px;">
+                  <div class="simplebar-height-auto-observer-wrapper">
+                    <div class="simplebar-height-auto-observer"></div>
+                  </div>
+                  <div class="simplebar-mask">
+                    <div class="simplebar-offset" style="right: 0px; bottom: 0px;">
+                      <div class="simplebar-content-wrapper" tabindex="0" role="region" aria-label="scrollable content" style="height: auto; overflow: hidden;">
+                        <div class="simplebar-content" style="padding: 0px;">
+                          <div class="navigation-section">
+                            <a target="" class="link collapsed d-block sw-font-size-m sw-text-color-000000 sw-font-family-default sw-font-weight-semibold sw-letter-spacing-normal sw-display-block sw-padding-top-6xs sw-padding-bottom-6xs sw-padding-left-6xs sw-padding-right-xs hover:sw-text-decoration-no-underline active:sw-background-color-transparent" href="https://www.getfinstack.in/#hero2" style="background-color: rgb(255, 255, 255);">Home</a>
+                            <a target="" class="link collapsed d-block sw-font-size-m sw-text-color-000000 sw-font-family-default sw-font-weight-semibold sw-letter-spacing-normal sw-display-block sw-padding-top-6xs sw-padding-bottom-6xs sw-padding-left-6xs sw-padding-right-xs hover:sw-text-decoration-no-underline active:sw-background-color-transparent" href="https://www.getfinstack.in/#feature-grid2" style="background-color: rgb(255, 255, 255);">Why Us</a>
+                            <a target="" class="link collapsed d-block sw-font-size-m sw-text-color-000000 sw-font-family-default sw-font-weight-semibold sw-letter-spacing-normal sw-display-block sw-padding-top-6xs sw-padding-bottom-6xs sw-padding-left-6xs sw-padding-right-xs hover:sw-text-decoration-no-underline active:sw-background-color-transparent" href="https://www.getfinstack.in/#feature3" style="background-color: rgb(255, 255, 255);">Solution</a>
+                            <a target="" class="link collapsed d-block sw-font-size-m sw-text-color-000000 sw-font-family-default sw-font-weight-semibold sw-letter-spacing-normal sw-display-block sw-padding-top-6xs sw-padding-bottom-6xs sw-padding-left-6xs sw-padding-right-xs hover:sw-text-decoration-no-underline active:sw-background-color-transparent" href="https://www.getfinstack.in/#faq1" style="background-color: rgb(255, 255, 255);">FAQ</a>
+                          </div>
+                          <div class="buttons-section">
+                            <a data-element="button" target="" class="sw-font-size-m sw-text-color-default sw-font-family-default sw-font-weight-semibold sw-border-radius-default sw-background-color-default sw-padding-left-2xs sw-padding-right-2xs sw-padding-top-5xs sw-padding-bottom-5xs sw-border-style-none sw-border-width-xs sw-border-color-000000 sw-letter-spacing-normal sw-text-decoration-no-underline hover:sw-text-decoration-no-underline hover:sw-box-shadow-m sw-display-block m:sw-margin-left-6xs" href="https://calendly.com/finstack-team/meet-with-finstack-founders">Contact Sales</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="simplebar-placeholder" style="width: 0px; height: 0px;"></div>
+                </div>
+                <div class="simplebar-track simplebar-horizontal" style="visibility: hidden;">
+                  <div class="simplebar-scrollbar" style="width: 0px; display: none;"></div>
+                </div>
+                <div class="simplebar-track simplebar-vertical" style="visibility: hidden;">
+                  <div class="simplebar-scrollbar" style="height: 0px; display: none;"></div>
+                </div>
+              </div>
+            </div> 
+          </div>
+        </nav>
+        <header id="hero2" data-block-version="2.0.2" data-block-id="5f5c1cd6-6a9a-407f-ce08-00080611d249" data-block-updated="" style="" class="hero8-5f5c1cd6-6a9a-407f-ce08-00080611d249 sw-background-color-ffffff sw-padding-top-2xl sw-padding-bottom-2xl sw-border-top-style-none sw-border-top-width-xs sw-border-top-color-000000 sw-border-bottom-style-none sw-border-bottom-width-xs sw-border-bottom-color-000000  sw-background-repeat-no-repeat sw-background-size-cover sw-background-position-center sw-background-attachment-scroll ">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-lg-6 pb-5 pb-lg-0 text-center text-lg-left">
+                <h1 class="d-block sw-font-size-4xl sw-text-color-default sw-font-family-default sw-font-weight-default sw-padding-top-none sw-padding-bottom-none sw-letter-spacing-normal sw-line-height-normal ">We're the AWS of Lending</h1>
+                <span id="typed" data-value="Personal Loans, Buy Now Pay Later, Business Loans, Asset Backed Loans, Home Loans" class="sw-font-size-4xl sw-text-color-ef3075 sw-font-family-default sw-font-weight-default sw-padding-top-none sw-padding-bottom-none sw-letter-spacing-normal ">Home Loans</span>
+                <span style="visibility:hidden;">|</span>
+                <h1 class=""></h1>
+                <p class="sw-font-size-xl sw-text-color-default sw-font-family-default sw-font-weight-default sw-padding-top-none sw-padding-bottom-3xs sw-letter-spacing-normal sw-line-height-normal">FinStack enables Banks, NBFCs, and Fintechs to underwrite loans for the billions of citizens of the world!</p>
+                <div class=" buttons-container d-flex justify-content-start  align-items-center flex-wrap">
+                  <a data-element="button" target="" class="hero-button sw-font-size-m sw-text-color-default sw-font-family-default sw-font-weight-semibold sw-border-radius-default sw-background-color-default sw-padding-left-s sw-padding-right-s sw-padding-top-5xs sw-padding-bottom-5xs sw-border-style-none sw-border-width-xs sw-border-color-000000 sw-letter-spacing-normal sw-text-decoration-no-underline hover:sw-text-decoration-no-underline hover:sw-box-shadow-m sw-margin-right-4xs sw-display-inline-block" href="https://calendly.com/finstack-team/meet-with-finstack-founders">Contact Sales</a>
+                </div>
+              </div>
+              <div class="col-lg-6 text-center">
+                <img src="./static/90099339-fab9-4dfd-a8cb-8291d51172a4.svg" class="sw-percentage-width-full sw-border-style-none sw-border-width-xs sw-border-color-000000 sw-border-radius-none  mx-auto d-block" alt="Image alt"></div>
+              </div>
+            </div>
+          </header>
+          <section id="feature-grid2" data-block-version="2.0.0" data-block-id="47c26e49-8ea5-4b61-a98a-a9ab0615fcf2" data-block-updated="" style="" class="feature-grid2-47c26e49-8ea5-4b61-a98a-a9ab0615fcf2 sw-background-color-fafafa sw-padding-top-2xl sw-padding-bottom-2xl sw-border-top-style-none sw-border-top-width-xs sw-border-top-color-000000 sw-border-bottom-style-none sw-border-bottom-width-xs sw-border-bottom-color-000000  sw-background-repeat-no-repeat sw-background-size-cover sw-background-position-center sw-background-attachment-scroll ">
+            <div class="container">
+              <div class="row">
+                <div class="col-12 text-center">
+                  <h2 class="sw-font-size-4xl sw-text-color-default sw-font-family-default sw-font-weight-default sw-padding-top-none sw-padding-bottom-4xs sw-letter-spacing-normal sw-line-height-normal ">Why go with FinStack?</h2>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 text-center">
+                  <p class="sw-font-size-xl sw-text-color-default sw-font-family-default sw-font-weight-default sw-padding-top-none sw-padding-bottom-3xs sw-letter-spacing-normal sw-line-height-normal ">We understand that building a lending product can be tiresome. We are here to solve that problem for you in the easiest possible manner.</p>
+                </div>
+              </div>
+              <div class="row gap-y text-center">
+                <div class="col-md-4  pt-4 pb-4">
+                  <label class="sw-width-3xs sw-height-3xs sw-margin-bottom-2xs" style="background-image: url(&#39;https://softr-prod.imgix.net/applications/93be98b2-93cb-40a6-8f06-baa0883d011d/assets/4c1f851e-151f-4fbd-b27e-adc21fa8426c.png&#39;); background-size: cover; background-repeat: no-repeat; background-position: center;">
+                  </label>
+                  <h6 class="sw-font-size-l sw-text-color-default sw-font-family-default sw-font-weight-medium sw-letter-spacing-normal sw-margin-bottom-6xs">Launch any loan product</h6>
+                  <p class="sw-font-size-m sw-text-color-default sw-font-family-default sw-font-weight-default sw-line-height-normal sw-letter-spacing-normal ">Personal Loan, BNPL, you name it! You can launch any product in just a few steps.</p>
+                </div>
+                <div class="col-md-4  pt-4 pb-4">
+                  <label class="sw-width-3xs sw-height-3xs sw-margin-bottom-2xs" style="background-image: url(&#39;https://softr-prod.imgix.net/applications/93be98b2-93cb-40a6-8f06-baa0883d011d/assets/359eeab8-dfcf-4423-b478-f64b5ba70e72.png&#39;); background-size: cover; background-repeat: no-repeat; background-position: center;"></label>
+                  <h6 class="sw-font-size-l sw-text-color-default sw-font-family-default sw-font-weight-medium sw-letter-spacing-normal sw-margin-bottom-6xs">Build to Scale</h6>
+                  <p class="sw-font-size-m sw-text-color-default sw-font-family-default sw-font-weight-default sw-line-height-normal sw-letter-spacing-normal ">Millions users, Billion users? Don't worry about it one bit. We can run up to an infinite scale.</p>
+                </div>
+                <div class="col-md-4  pt-4 pb-4">
+                  <label class="sw-width-3xs sw-height-3xs sw-margin-bottom-2xs" style="background-image: url(&#39;https://softr-prod.imgix.net/applications/93be98b2-93cb-40a6-8f06-baa0883d011d/assets/46ebfa01-fda2-461d-a13d-d82ab1912a85.png&#39;); background-size: cover; background-repeat: no-repeat; background-position: center;"></label>
+                  <h6 class="sw-font-size-l sw-text-color-default sw-font-family-default sw-font-weight-medium sw-letter-spacing-normal sw-margin-bottom-6xs">Secure and Compliant</h6>
+                  <p class="sw-font-size-m sw-text-color-default sw-font-family-default sw-font-weight-default sw-line-height-normal sw-letter-spacing-normal ">We understand that security is empirical. Build loan products with our most secure partners.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section id="feature3" data-block-version="2.0.0" data-block-id="78441040-8113-4868-dd26-c24680449590" data-block-updated="" style="" class="feature4-78441040-8113-4868-dd26-c24680449590 sw-background-color-e3f9ff sw-padding-top-2xl sw-padding-bottom-2xl sw-border-top-style-none sw-border-top-width-xs sw-border-top-color-000000 sw-border-bottom-style-none sw-border-bottom-width-xs sw-border-bottom-color-000000  sw-background-repeat-no-repeat sw-background-size-cover sw-background-position-center sw-background-attachment-scroll ">
+            <div class="container">
+              <div class="col-12 text-center">
+                <h2 class="sw-font-size-4xl sw-text-color-000000 sw-font-family-default sw-font-weight-default sw-padding-top-none sw-padding-bottom-4xs sw-letter-spacing-normal sw-line-height-normal ">Become a Lending  Powerhouse with FinStack</h2>
+                <p class="sw-font-size-xl sw-text-color-000000 sw-font-family-default sw-font-weight-default sw-padding-top-none sw-padding-bottom-m sw-letter-spacing-normal sw-line-height-normal ">Our no-code Underwriting framework helps banks and fintech to optimize their policies and run their underwriting on auto-pilot</p>
+              </div>
+              <div class="row align-items-center">
+                <div class="col-md-6 text-center">
+                  <img id="feature3-display-img" src="./static/a5e77228-4539-4711-817a-e84c7a37a37a.png" class="sw-percentage-width-full sw-border-style-none sw-border-width-xs sw-border-color-ffffff sw-border-radius-none mx-auto d-block" alt="Our awesome features">
+                </div>
+                <div class="col-md-6 text-center text-lg-left pt-5 pt-lg-0">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="s-feature-box active" data-img="https://softr-prod.imgix.net/applications/93be98b2-93cb-40a6-8f06-baa0883d011d/assets/a5e77228-4539-4711-817a-e84c7a37a37a.png" data-img-alt="Our awesome features" data-img-classes="sw-percentage-width-full sw-border-style-none sw-border-width-xs sw-border-color-ffffff sw-border-radius-none  mx-auto d-block">
+                        <h6 class="sw-font-size-2xl sw-text-color-000000 sw-font-family-default sw-font-weight-medium sw-letter-spacing-normal sw-margin-bottom-6xs sw-margin-top-none">Integrate all the Data points</h6>
+                        <p class="sw-font-size-m sw-text-color-000000 sw-font-family-default sw-font-weight-default sw-line-height-normal sw-letter-spacing-normal ">Connect your data and all third-party integration in under 10 minutes</p>
+                        <img class="d-md-none mobile-img sw-percentage-width-full sw-border-style-none sw-border-width-xs sw-border-color-ffffff sw-border-radius-none  mx-auto d-block" src="./static/a5e77228-4539-4711-817a-e84c7a37a37a.png" alt="Our awesome features">
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="s-feature-box" data-img="https://softr-prod.imgix.net/applications/93be98b2-93cb-40a6-8f06-baa0883d011d/assets/6ae7a740-f6f2-4df5-8e15-e605cd71701a.png" data-img-alt="Our awesome features" data-img-classes="sw-percentage-width-full sw-border-style-none sw-border-width-xs sw-border-color-000000 sw-border-radius-none  mx-auto d-block">
+                        <h6 class="sw-font-size-2xl sw-text-color-000000 sw-font-family-default sw-font-weight-medium sw-letter-spacing-normal sw-margin-bottom-6xs sw-margin-top-none">Implement Policies with No-Code</h6>
+                        <p class="sw-font-size-m sw-text-color-000000 sw-font-family-default sw-font-weight-default sw-line-height-normal sw-letter-spacing-normal ">With FinStack's no-code BRE, create, simulate and implement underwriting policies</p>        <img class="d-md-none mobile-img sw-percentage-width-full sw-border-style-none sw-border-width-xs sw-border-color-000000 sw-border-radius-none  mx-auto d-block" src="./static/6ae7a740-f6f2-4df5-8e15-e605cd71701a.png" alt="Our awesome features">
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="s-feature-box" data-img="https://softr-prod.imgix.net/applications/93be98b2-93cb-40a6-8f06-baa0883d011d/assets/870910ee-1a05-4007-b046-3e52851ab189.png" data-img-alt="Our awesome features" data-img-classes="sw-percentage-width-full sw-border-style-none sw-border-width-xs sw-border-color-000000 sw-border-radius-none  mx-auto d-block">
+                        <h6 class="sw-font-size-2xl sw-text-color-000000 sw-font-family-default sw-font-weight-medium sw-letter-spacing-normal sw-margin-bottom-6xs sw-margin-top-none">Track Performance of Policies in real-time</h6>
+                        <p class="sw-font-size-m sw-text-color-000000 sw-font-family-default sw-font-weight-default sw-line-height-normal sw-letter-spacing-normal ">Get to know your performance of all the Rules and Policies</p>
+                        <img class="d-md-none mobile-img sw-percentage-width-full sw-border-style-none sw-border-width-xs sw-border-color-000000 sw-border-radius-none  mx-auto d-block" src="./static/870910ee-1a05-4007-b046-3e52851ab189.png" alt="Our awesome features">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section id="faq1" data-block-version="2.0.0" data-block-id="36fd806c-44e8-4c73-8199-ae46729ea8d3" data-block-updated="" class="faq1-36fd806c-44e8-4c73-8199-ae46729ea8d3 sw-background-color-ffffff sw-padding-top-2xl sw-padding-bottom-2xl sw-border-top-style-none sw-border-top-width-xs sw-border-top-color-000000 sw-border-bottom-style-none sw-border-bottom-width-xs sw-border-bottom-color-000000 ">
+            <div class="container">
+              <div class="row">
+                <div class="col-12 text-center">
+                  <h2 class="sw-font-size-4xl sw-text-color-default sw-font-family-default sw-font-weight-default sw-padding-top-none sw-padding-bottom-4xs sw-letter-spacing-normal sw-line-height-normal ">Frequently Asked Questions</h2>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-sm-10 offset-sm-1 text-center">
+                  <p class="sw-font-size-xl sw-text-color-default sw-font-family-default sw-font-weight-default sw-padding-top-none sw-padding-bottom-3xs sw-letter-spacing-normal sw-line-height-normal ">Got questions? We've got answers.</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-sm-10 offset-sm-1 text-center">
+                  <div class="accordion sw-accordion-border" id="faq1-accordion">
+                    <div class="mb-0 border-0 text-left">
+                      <span data-toggle="collapse" href="#faq1-accordion-0" aria-expanded="false" class="collapsed sw-font-size-m sw-text-color-default sw-font-family-default sw-font-weight-medium sw-background-color-f9fafb sw-letter-spacing-normal sw-padding-left-4xs sw-padding-top-4xs sw-padding-bottom-4xs sw-text-decoration-no-underline sw-display-block sw-border-bottom-style-solid sw-border-bottom-width-xs sw-border-bottom-color-f1f2f3 sw-cursor-pointer">What is FinStack?<span class="arrow"></span></span>
+                      <div id="faq1-accordion-0" class="collapse" data-parent="#faq1-accordion"><p class="sw-font-size-m sw-text-color-default sw-font-family-default sw-font-weight-normal sw-background-color-ffffff sw-line-height-normal sw-letter-spacing-normal sw-padding-left-4xs sw-padding-right-4xs sw-padding-top-4xs sw-margin-bottom-none sw-padding-bottom-4xs sw-border-bottom-style-solid sw-border-bottom-width-xs sw-border-bottom-color-f1f2f3">FinStack is a no-code business rule platform that enable you to underwrite loans and insurance</p>
+                      </div>
+                    </div>
+                    <div class="mb-0 border-0 text-left">
+                      <span data-toggle="collapse" href="#faq1-accordion-1" aria-expanded="false" class="collapsed sw-font-size-m sw-text-color-default sw-font-family-default sw-font-weight-medium sw-background-color-f9fafb sw-letter-spacing-normal sw-padding-left-4xs sw-padding-top-4xs sw-padding-bottom-4xs sw-text-decoration-no-underline sw-display-block sw-border-bottom-style-solid sw-border-bottom-width-xs sw-border-bottom-color-f1f2f3 sw-cursor-pointer">I don't have a loan/insurance product yet, can I use FinStack?<span class="arrow"></span>
+                      </span>
+                      <div id="faq1-accordion-1" class="collapse" data-parent="#faq1-accordion"><p class="sw-font-size-m sw-text-color-default sw-font-family-default sw-font-weight-normal sw-background-color-ffffff sw-line-height-normal sw-letter-spacing-normal sw-padding-left-4xs sw-padding-right-4xs sw-padding-top-4xs sw-margin-bottom-none sw-padding-bottom-4xs sw-border-bottom-style-solid sw-border-bottom-width-xs sw-border-bottom-color-f1f2f3">We're a perfect match! We will enable you to set up your lending platform in just a matter of a few hours.</p>
+                      </div>
+                    </div>
+                    <div class="mb-0 border-0 text-left">
+                      <span data-toggle="collapse" href="#faq1-accordion-2" aria-expanded="false" class="collapsed sw-font-size-m sw-text-color-default sw-font-family-default sw-font-weight-medium sw-background-color-f9fafb sw-letter-spacing-normal sw-padding-left-4xs sw-padding-top-4xs sw-padding-bottom-4xs sw-text-decoration-no-underline sw-display-block sw-border-bottom-style-solid sw-border-bottom-width-xs sw-border-bottom-color-f1f2f3 sw-cursor-pointer">I already have a loan/ insurance product, can I use FinStack?<span class="arrow"></span>
+                      </span>
+                      <div id="faq1-accordion-2" class="collapse" data-parent="#faq1-accordion">
+                        <p class="sw-font-size-m sw-text-color-default sw-font-family-default sw-font-weight-normal sw-background-color-ffffff sw-line-height-normal sw-letter-spacing-normal sw-padding-left-4xs sw-padding-right-4xs sw-padding-top-4xs sw-margin-bottom-none sw-padding-bottom-4xs sw-border-bottom-style-solid sw-border-bottom-width-xs sw-border-bottom-color-f1f2f3">Most definitely! In fact, it enables us to get partnered up much faster. We will help you switch from your existing platform and onboard you to our No-code platform instantly</p>
+                      </div>
+                    </div>
+                    <div class="mb-0 border-0 text-left">
+                      <span data-toggle="collapse" href="#faq1-accordion-3" aria-expanded="false" class="collapsed sw-font-size-m sw-text-color-default sw-font-family-default sw-font-weight-medium sw-background-color-f9fafb sw-letter-spacing-normal sw-padding-left-4xs sw-padding-top-4xs sw-padding-bottom-4xs sw-text-decoration-no-underline sw-display-block sw-border-bottom-style-solid sw-border-bottom-width-xs sw-border-bottom-color-f1f2f3 sw-cursor-pointer">Can I be FinStack's Integration partner?<span class="arrow"></span>
+                      </span>
+                      <div id="faq1-accordion-3" class="collapse" data-parent="#faq1-accordion">
+                        <p class="sw-font-size-m sw-text-color-default sw-font-family-default sw-font-weight-normal sw-background-color-ffffff sw-line-height-normal sw-letter-spacing-normal sw-padding-left-4xs sw-padding-right-4xs sw-padding-top-4xs sw-margin-bottom-none sw-padding-bottom-4xs sw-border-bottom-style-solid sw-border-bottom-width-xs sw-border-bottom-color-f1f2f3">Absolutely! We would love to have it in our data hub. Mail us about your platform at sales@getfinstack.in
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section id="cta1" style="" data-block-version="2.0.0" data-block-id="59409966-2e20-49b2-e7fe-5e627f8e9ba0" data-block-updated="" class="cta6-59409966-2e20-49b2-e7fe-5e627f8e9ba0 sw-background-color-ff619b sw-padding-top-2xl sw-padding-bottom-2xl sw-border-top-style-none sw-border-top-width-xs sw-border-top-color-000000 sw-border-bottom-style-none sw-border-bottom-width-xs sw-border-bottom-color-000000   sw-background-repeat-no-repeat sw-background-size-cover sw-background-position-center sw-background-attachment-scroll ">
+            <div class="container">
+              <div class="row align-items-center">
+                <div class="col-12 text-center box-container sw-background-color-ff619b sw-border-style-none sw-border-width-xs sw-border-color-000000 sw-border-radius-2xl sw-box-shadow-none sw-padding-top-xl sw-padding-bottom-xl ">
+                  <h2 class="sw-font-size-4xl sw-text-color-fff sw-font-family-default sw-font-weight-bold sw-padding-top-none sw-padding-bottom-4xs sw-letter-spacing-normal sw-line-height-normal ">Looks quite exciting, doesn't it?</h2>
+                  <p class="sw-font-size-l sw-text-color-fff sw-font-family-default sw-font-weight-thin sw-padding-top-none sw-padding-bottom-3xs sw-letter-spacing-normal sw-line-height-normal ">Let's get connected over quick call. We would love to help build amazing products!</p>
+                  <div class="d-flex justify-content-center flex-wrap">
+                    <a data-element="button" target="" class="sw-font-size-m sw-text-color-default sw-font-family-default sw-font-weight-semibold sw-border-radius-default sw-background-color-default sw-padding-left-l sw-padding-right-l sw-padding-top-5xs sw-padding-bottom-5xs sw-border-style-none sw-border-width-xs sw-border-color-000000 sw-letter-spacing-normal sw-text-decoration-no-underline hover:sw-text-decoration-no-underline hover:sw-box-shadow-m sw-margin-bottom-6xs sw-display-inline-block sw-margin-left-7xs sw-margin-right-7xs" href="https://calendly.com/finstack-team/meet-with-finstack-founders">Contact Sales</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <footer id="home_footer1" data-block-version="2.0.0" data-block-id="2637b06b-e657-4fde-e23a-3ba1f36e9c7d" data-block-updated="" class="footer1-2637b06b-e657-4fde-e23a-3ba1f36e9c7d sw-background-color-ffffff sw-padding-top-2xl sw-padding-bottom-2xl sw-border-top-style-none sw-border-top-width-xs sw-border-top-color-000000 sw-border-bottom-style-none sw-border-bottom-width-xs sw-border-bottom-color-000000 ">
+            <div class="container">
+              <div class="row align-items-center">
+                <div class="col-md-3 col-12 text-center text-md-left pb-md-2 pb-5">
+                  <a href="https://www.getfinstack.in/">
+                    <img class="sw-width-4xs " src="./static/1eec4b6e-49f3-4882-b1b5-011cf3976fe2.png" alt="">
+                  </a>
+                </div>
+                <div class="col-md-9 col-12 pb-2">
+                  <div class="nav justify-content-center justify-content-md-end">
+                    <a target="" class="nav-link sw-font-size-m sw-text-color-000000 sw-font-family-default sw-font-weight-semibold sw-letter-spacing-normal " href="https://www.getfinstack.in/#hero2">Home</a>
+                    <a target="" class="nav-link sw-font-size-m sw-text-color-000000 sw-font-family-default sw-font-weight-semibold sw-letter-spacing-normal " href="https://www.getfinstack.in/#feature-grid2">Why Us</a>
+                    <a target="" class="nav-link sw-font-size-m sw-text-color-000000 sw-font-family-default sw-font-weight-semibold sw-letter-spacing-normal " href="https://www.getfinstack.in/#feature3">Solution</a>
+                    <a target="" class="nav-link sw-font-size-m sw-text-color-000000 sw-font-family-default sw-font-weight-semibold sw-letter-spacing-normal " href="https://calendly.com/finstack-team/meet-with-finstack-founders">Demo</a>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <hr class="sw-margin-top-3xs sw-margin-bottom-3xs sw-border-top-style-solid sw-border-top-width-xs sw-border-top-color-cccccc ">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-7">
+                  <small class="sw-font-size-m sw-text-color-default sw-font-family-default sw-font-weight-default sw-padding-top-none sw-padding-bottom-3xs sw-display-block">Made with ❤️ and ☕️ from 🇮🇳</small>
+                </div>
+                <div class="col-5">
+                  <div class="text-right">
+                    <a href="https://www.linkedin.com/company/getfinstack/" target="_blank" class="sw-text-color-000000 sw-font-size-m sw-width-11xs sw-display-inline-block">
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </footer>
+        </div>  
+        <script>
+            (() => {
+              function rgb2hex(orig) {
+                var rgb = orig.replace(/\s/g, "").match(/^rgba?\((\d+),(\d+),(\d+)/i);
+                return rgb && rgb.length === 4
+                  ? "#" +
+                      ("0" + parseInt(rgb[1], 10).toString(16)).slice(-2) +
+                      ("0" + parseInt(rgb[2], 10).toString(16)).slice(-2) +
+                      ("0" + parseInt(rgb[3], 10).toString(16)).slice(-2)
+                  : orig;
+              }
+
+              function lightOrDark(color) {
+                // Variables for red, green, blue values
+                var r, g, b, hsp;
+
+                // Check the format of the color, HEX or RGB?
+                if (color.match(/^rgb/)) {
+                  // If RGB --> store the red, green, blue values in separate variables
+                  color = color.match(
+                    /^rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*(\d+(?:\.\d+)?))?\)$/
+                  );
+
+                  r = color[1];
+                  g = color[2];
+                  b = color[3];
+                } else {
+                  // If hex --> Convert it to RGB: http://gist.github.com/983661
+                  color = +(
+                    "0x" + color.slice(1).replace(color.length < 5 && /./g, "$&$&")
+                  );
+
+                  r = color >> 16;
+                  g = (color >> 8) & 255;
+                  b = color & 255;
+                }
+
+                // HSP (Highly Sensitive Poo) equation from http://alienryderflex.com/hsp.html
+                hsp = Math.sqrt(0.299 * (r * r) + 0.587 * (g * g) + 0.114 * (b * b));
+
+                // Using the HSP value, determine whether the color is light or dark
+                if (hsp > 127.5) {
+                  return "light";
+                } else {
+                  return "dark";
+                }
+              }
+
+              function isInCurrentSection(elTop, elBottom) {
+                const innerHeight = window.innerHeight - 30;
+                return elTop < innerHeight && elBottom > innerHeight;
+              }
+
+              function setRightTheme(sections, softrEl) {
+                sections.forEach(item => {
+                  const elementTop = item.getBoundingClientRect().top;
+                  const elementBottom = item.getBoundingClientRect().bottom;
+
+                  if (isInCurrentSection(elementTop, elementBottom)) {
+                    const documentBodyColor = window
+                      .getComputedStyle(item)
+                      .getPropertyValue("background-color");
+
+                    const bgColor = lightOrDark(rgb2hex(documentBodyColor));
+
+                    if (bgColor === "light") {
+                      softrEl.classList.add("dark-theme");
+                    } else {
+                      softrEl.classList.remove("dark-theme");
+                    }
+                  }
+                });
+              }
+
+              function init() {
+
+                const headers = document.querySelectorAll("header");
+                const sections = document.querySelectorAll("section");
+                const footers = document.querySelectorAll("footer");
+                const allSections = [...headers, ...sections, ...footers];
+                setRightTheme(allSections, softrEl);
+
+                document.addEventListener("scroll", () => {
+                  setRightTheme(allSections, softrEl);
+                });
+              }
+
+
+              init();
+              setInterval(() => {
+                init();
+              }, (Math.floor(2 + Math.random() * 5)) * 1000);
+            })();
+        </script>
+
+        <!-- Scripts -->
+        <script src="./static/jquery.min.js"></script>
+        <script src="./static/popper.min.js"></script>
+        <script src="./static/bootstrap.min.js"></script>
+        <script src="./static/micromodal.min.js"></script>
+
+        <script type="text/javascript">
+            if(window.jQuery && window.jQuery.ajaxSetup) {
+                window.jQuery.ajaxSetup({
+                    beforeSend: function(xhr, settings) {
+                        if(settings && settings.url && (
+                        settings.url.includes('/integrations/airtable/')
+                        || settings.url.includes('/v1/applications/93be98b2-93cb-40a6-8f06-baa0883d011d')
+                        || settings.url.includes('/v1/comments')
+                        || settings.url.includes('/forms/form-to-email'))
+                        ){
+                            xhr.setRequestHeader('softr-page-id', '3ff20a57-15e6-4447-82ee-fbadcdee76f4');
+                        }
+                    }
+                });
+            }
+
+            window['home_header2'] = {}; ;(function () {   function isInStudio() {  return window.location.href.startsWith('http://localhost:') ||    window.location.href.includes('https://studio-staging') ||    window.location.href.includes('https://studio-staging02') ||    window.location.href.includes('https://studio-staging03') ||    window.location.href.startsWith('https://studio.softr.io/')   }    function isInLocal() {  return window.location.href.startsWith('file://');   }    const isInPublish = !isInStudio() && !isInLocal();   const isInPreview = () => window.location.href.includes('.preview.');   const elements = JSON.parse(`{"definitions":{"link":{"tag":"a","type":"link","primaryStyles":[{"name":"size-color","label":"Text Size/Color","isPrimary":true,"classes":["sw-font-size-m","sw-text-color-000000"]},{"name":"font-family","label":"Font family","isPrimary":true,"classes":["sw-font-family-default"]},{"name":"font-weight","label":"Font weight","isPrimary":true,"classes":["sw-font-weight-semibold"]},{"name":"letter-spacing","label":"Letter spacing","isPrimary":true,"classes":["sw-letter-spacing-normal"]}],"otherStyles":[{"name":"others","label":"Others","isPrimary":true,"classes":["sw-display-block","sw-padding-top-6xs","sw-padding-bottom-6xs","sw-padding-left-6xs","sw-padding-right-xs","hover:sw-text-decoration-no-underline","active:sw-background-color-transparent"]}],"value":"Link name","action":{"type":"navigate","options":{"url":{"destination":"","target":""}}}},"profileLink":{"link":{"tag":"a","type":"link","primaryStyles":[{"name":"size-color","label":"Text Size/Color","isPrimary":true,"classes":["sw-font-size-s","sw-text-color-000000"]},{"name":"font-family","label":"Font family","isPrimary":true,"classes":["sw-font-family-default"]},{"name":"font-weight","label":"Font weight","isPrimary":true,"classes":["sw-font-weight-normal"]},{"name":"letter-spacing","label":"Letter spacing","isPrimary":true,"classes":["sw-letter-spacing-normal"]}],"otherStyles":[{"name":"others","label":"Others","isPrimary":true,"classes":["sw-display-flex","sw-padding-top-7xs","sw-padding-bottom-7xs","sw-padding-left-7xs","sw-padding-right-7xs","hover:sw-text-decoration-no-underline","active:sw-background-color-transparent"]}],"value":"Link name","action":{"type":"navigate","options":{"url":{"destination":"","target":""}}}},"icon":{"tag":"i","type":"icon","primaryStyles":[{"name":"size-color","label":"Icon Size/Color","isPrimary":true,"showFor":"icon","classes":["sw-font-size-s","sw-text-color-13324b"]},{"name":"width","label":"Icon Size","isPrimary":true,"showFor":"image","classes":["sw-width-11xs"]}],"otherStyles":[{"name":"others","label":"Others","isPrimary":true,"classes":["sw-margin-right-7xs","sw-margin-left-7xs","sw-text-align-left"]}],"provider":"font-awesome","value":"fas  fa-shield-alt","src":""}},"compositeLink":{"link":{"tag":"a","type":"link","primaryStyles":[{"name":"size-color","label":"Text Size/Color","isPrimary":true,"classes":["sw-font-size-m","sw-text-color-000000"]},{"name":"font-family","label":"Font family","isPrimary":true,"classes":["sw-font-family-default"]},{"name":"font-weight","label":"Font weight","isPrimary":true,"classes":["sw-font-weight-semibold"]},{"name":"letter-spacing","label":"Letter spacing","isPrimary":true,"classes":["sw-letter-spacing-normal"]}],"otherStyles":[{"name":"others","label":"Others","isPrimary":true,"classes":["sw-display-block","sw-padding-top-6xs","sw-padding-bottom-6xs","sw-padding-left-6xs","sw-padding-right-xs","hover:sw-text-decoration-no-underline","active:sw-background-color-transparent"]}],"value":"Link name","action":{"type":"navigate","options":{"url":{"destination":"","target":""}}}},"subLinks":{"type":"array","item_type":"#/elements/definitions/link","items":[]}},"button":{"tag":"a","type":"button","primaryStyles":[{"name":"size-color","label":"Text Size/Color","isPrimary":true,"classes":["sw-font-size-m","sw-text-color-default"]},{"name":"font-family","label":"Font family","isPrimary":true,"classes":["sw-font-family-default"]},{"name":"font-weight","label":"Font weight","isPrimary":true,"classes":["sw-font-weight-semibold"]},{"name":"border-radius","label":"Roundness","isPrimary":true,"classes":["sw-border-radius-default"]},{"name":"background-color","label":"Background color","isPrimary":true,"classes":["sw-background-color-default"]},{"name":"padding-left-right","label":"Padding left/right","isPrimary":true,"classes":["sw-padding-left-2xs","sw-padding-right-2xs"]},{"name":"padding-top-bottom","label":"Padding top/bottom","isPrimary":true,"classes":["sw-padding-top-5xs","sw-padding-bottom-5xs"]},{"name":"border","label":"Border","isPrimary":true,"classes":["sw-border-style-none","sw-border-width-xs","sw-border-color-000000"]},{"name":"letter-spacing","label":"Letter spacing","isPrimary":true,"classes":["sw-letter-spacing-normal"]}],"otherStyles":[{"name":"others","label":"Others","isPrimary":true,"classes":["sw-text-decoration-no-underline","hover:sw-text-decoration-no-underline","hover:sw-box-shadow-m","sw-display-block","m:sw-margin-left-6xs"]}],"label":"Button label","action":{"type":"navigate","options":{"url":{"destination":"","target":""}}}}},"sticky":true,"profileEnabled":false,"verticalEnabled":false,"container":{"tag":"nav","type":"container","primaryStyles":[{"name":"background-color","label":"Background color","isPrimary":true,"classes":["sw-background-color-ffffff"]},{"name":"padding-top","label":"Padding top","isPrimary":true,"classes":["sw-padding-top-6xs"]},{"name":"padding-bottom","label":"Padding bottom","isPrimary":true,"classes":["sw-padding-bottom-6xs"]},{"name":"border-top","label":"Border top","isPrimary":true,"classes":["sw-border-top-style-none","sw-border-top-width-xs","sw-border-top-color-000000"]},{"name":"border-bottom","label":"Border bottom","isPrimary":true,"classes":["sw-border-bottom-style-none","sw-border-bottom-width-xs","sw-border-bottom-color-000000"]}]},"logo":{"tag":"img","type":"image-with-link","primaryStyles":[{"name":"width","label":"Width","isPrimary":true,"classes":["sw-width-4xs"]}],"src":"./static/1eec4b6e-49f3-4882-b1b5-011cf3976fe2.png","alt":""},"links":{"type":"array","item_type":"#/elements/definitions/compositeLink","items":[{"link":{"tag":"a","type":"link","primaryStyles":[{"name":"size-color","label":"Text Size/Color","isPrimary":true,"classes":["sw-font-size-m","sw-text-color-000000"]},{"name":"font-family","label":"Font family","isPrimary":true,"classes":["sw-font-family-default"]},{"name":"font-weight","label":"Font weight","isPrimary":true,"classes":["sw-font-weight-semibold"]},{"name":"letter-spacing","label":"Letter spacing","isPrimary":true,"classes":["sw-letter-spacing-normal"]}],"otherStyles":[{"name":"others","label":"Others","isPrimary":true,"classes":["sw-display-block","sw-padding-top-6xs","sw-padding-bottom-6xs","sw-padding-left-6xs","sw-padding-right-xs","hover:sw-text-decoration-no-underline","active:sw-background-color-transparent"]}],"value":"Home","action":{"type":"navigate","options":{"url":{"destination":"/#hero2","target":""}}}},"subLinks":{"type":"array","item_type":"#/elements/definitions/link","items":[]}},{"link":{"tag":"a","type":"link","primaryStyles":[{"name":"size-color","label":"Text Size/Color","isPrimary":true,"classes":["sw-font-size-m","sw-text-color-000000"]},{"name":"font-family","label":"Font family","isPrimary":true,"classes":["sw-font-family-default"]},{"name":"font-weight","label":"Font weight","isPrimary":true,"classes":["sw-font-weight-semibold"]},{"name":"letter-spacing","label":"Letter spacing","isPrimary":true,"classes":["sw-letter-spacing-normal"]}],"otherStyles":[{"name":"others","label":"Others","isPrimary":true,"classes":["sw-display-block","sw-padding-top-6xs","sw-padding-bottom-6xs","sw-padding-left-6xs","sw-padding-right-xs","hover:sw-text-decoration-no-underline","active:sw-background-color-transparent"]}],"value":"Why Us","action":{"type":"navigate","options":{"url":{"destination":"/#feature-grid2","target":""}}}},"subLinks":{"type":"array","item_type":"#/elements/definitions/link","items":[]}},{"link":{"tag":"a","type":"link","primaryStyles":[{"name":"size-color","label":"Text Size/Color","isPrimary":true,"classes":["sw-font-size-m","sw-text-color-000000"]},{"name":"font-family","label":"Font family","isPrimary":true,"classes":["sw-font-family-default"]},{"name":"font-weight","label":"Font weight","isPrimary":true,"classes":["sw-font-weight-semibold"]},{"name":"letter-spacing","label":"Letter spacing","isPrimary":true,"classes":["sw-letter-spacing-normal"]}],"otherStyles":[{"name":"others","label":"Others","isPrimary":true,"classes":["sw-display-block","sw-padding-top-6xs","sw-padding-bottom-6xs","sw-padding-left-6xs","sw-padding-right-xs","hover:sw-text-decoration-no-underline","active:sw-background-color-transparent"]}],"value":"Solution","action":{"type":"navigate","options":{"url":{"destination":"/#feature3","target":""}}}},"subLinks":{"type":"array","item_type":"#/elements/definitions/link","items":[]}},{"link":{"tag":"a","type":"link","primaryStyles":[{"name":"size-color","label":"Text Size/Color","isPrimary":true,"classes":["sw-font-size-m","sw-text-color-000000"]},{"name":"font-family","label":"Font family","isPrimary":true,"classes":["sw-font-family-default"]},{"name":"font-weight","label":"Font weight","isPrimary":true,"classes":["sw-font-weight-semibold"]},{"name":"letter-spacing","label":"Letter spacing","isPrimary":true,"classes":["sw-letter-spacing-normal"]}],"otherStyles":[{"name":"others","label":"Others","isPrimary":true,"classes":["sw-display-block","sw-padding-top-6xs","sw-padding-bottom-6xs","sw-padding-left-6xs","sw-padding-right-xs","hover:sw-text-decoration-no-underline","active:sw-background-color-transparent"]}],"value":"FAQ","action":{"type":"navigate","options":{"url":{"destination":"/#faq1","target":""}}}},"subLinks":{"type":"array","item_type":"#/elements/definitions/link","items":[]}}]},"buttons":{"type":"array","item_type":"#/elements/definitions/button","items":[{"tag":"a","type":"button","primaryStyles":[{"name":"size-color","label":"Text Size/Color","isPrimary":true,"classes":["sw-font-size-m","sw-text-color-default"]},{"name":"font-family","label":"Font family","isPrimary":true,"classes":["sw-font-family-default"]},{"name":"font-weight","label":"Font weight","isPrimary":true,"classes":["sw-font-weight-semibold"]},{"name":"border-radius","label":"Roundness","isPrimary":true,"classes":["sw-border-radius-default"]},{"name":"background-color","label":"Background color","isPrimary":true,"classes":["sw-background-color-default"]},{"name":"padding-left-right","label":"Padding left/right","isPrimary":true,"classes":["sw-padding-left-2xs","sw-padding-right-2xs"]},{"name":"padding-top-bottom","label":"Padding top/bottom","isPrimary":true,"classes":["sw-padding-top-5xs","sw-padding-bottom-5xs"]},{"name":"border","label":"Border","isPrimary":true,"classes":["sw-border-style-none","sw-border-width-xs","sw-border-color-000000"]},{"name":"letter-spacing","label":"Letter spacing","isPrimary":true,"classes":["sw-letter-spacing-normal"]}],"otherStyles":[{"name":"others","label":"Others","isPrimary":true,"classes":["sw-text-decoration-no-underline","hover:sw-text-decoration-no-underline","hover:sw-box-shadow-m","sw-display-block","m:sw-margin-left-6xs"]}],"label":"Contact Sales","action":{"type":"navigate","options":{"url":{"destination":"https://calendly.com/finstack-team/meet-with-finstack-founders","target":""}},"action":"Open external url > https://calendly.com/finstack-team/meet-with-finstack-founders"}}]},"profileLinks":{"type":"array","item_type":"#/elements/definitions/profileLink","items":[{"link":{"tag":"a","type":"link","primaryStyles":[{"name":"size-color","label":"Text Size/Color","isPrimary":true,"classes":["sw-font-size-s","sw-text-color-000000"]},{"name":"font-family","label":"Font family","isPrimary":true,"classes":["sw-font-family-default"]},{"name":"font-weight","label":"Font weight","isPrimary":true,"classes":["sw-font-weight-normal"]},{"name":"letter-spacing","label":"Letter spacing","isPrimary":true,"classes":["sw-letter-spacing-normal"]}],"otherStyles":[{"name":"others","label":"Others","isPrimary":true,"classes":["sw-display-flex","sw-padding-top-7xs","sw-padding-bottom-7xs","sw-padding-left-7xs","sw-padding-right-7xs","hover:sw-text-decoration-no-underline","active:sw-background-color-transparent"]}],"value":"Sign Out","action":{"type":"navigate","options":{"url":{"destination":"action:signout","target":""}}}},"icon":{"tag":"i","type":"icon","primaryStyles":[{"name":"size-color","label":"Icon Size/Color","isPrimary":true,"showFor":"icon","classes":["sw-font-size-s","sw-text-color-13324b"]},{"name":"width","label":"Icon Size","isPrimary":true,"showFor":"image","classes":["sw-width-11xs"]}],"otherStyles":[{"name":"others","label":"Others","isPrimary":true,"classes":["sw-margin-right-7xs","sw-margin-left-7xs","sw-text-align-left"]}],"provider":"font-awesome","value":"fas fa-power-off","src":""}}]},"profileIcon":{"tag":"img","primaryStyles":[{"name":"size-color","label":"Icon Size/Color","isPrimary":true,"showFor":"icon","classes":["sw-font-size-s","sw-text-color-ffffff"]},{"name":"background-color","label":"Background color","isPrimary":true,"classes":["sw-background-color-9ea5b4"]},{"name":"border","label":"Border","isPrimary":true,"classes":["sw-border-style-solid","sw-border-width-xs","sw-border-color-9ea5b4"]}],"otherStyles":[{"name":"others","label":"Others","isPrimary":true,"classes":["sw-background-attachment-scroll","sw-background-repeat-no-repeat","sw-background-position-center","sw-background-size-cover"]}],"src":"https://softr-assets-eu-shared.s3.eu-central-1.amazonaws.com/studio/blocks/assets/user_profile1.jpg","value":""}}`);    const blockIdentifier = '#home_header2';   const isVertical = (isInPreview() || isInPublish) && elements.verticalEnabled;    const setNavbarVisibility = () => {  $(blockIdentifier).css({    opacity: 1,    visibility: 'visible',  });   };    if(elements.profileEnabled) {  profileIconInitialization();   }    if (!elements.isVertical || (isInStudio() && !isInPreview())) {  setNavbarVisibility();   }    const switchToVertical = () => {  const siblings = $(blockIdentifier).siblings();  const parentElement = $(blockIdentifier).parent();  $(blockIdentifier).addClass('navbar-vertical');   if (!$('#vertical-holder').length) {    $('#home_header2 .mob-menu-body').data('simplebar');     const holder = $('<div id="vertical-holder" style="display: flex" />');    holder.append($(blockIdentifier));    holder.appendTo(parentElement);  } else {    $(blockIdentifier).hasClass('navbar-vertical') && $(blockIdentifier).appendTo($('#vertical-holder'));  }   $('#vertical-holder').parent().css({ display: 'flex' });  $('#home_header2 .vertical-profile').show();  $('#home_header2 .mobile-profile').hide();   if (!$('#data-content-vertical').length) {    const div = $('<div id="data-content-vertical" />');     Array.from(siblings).forEach((child) => {   div.append(child);    });     $(document.body).css('overflow-x', 'initial');     div.appendTo(parentElement);     parentElement.css({   "display": "flex",    });  }   $('#home_header2 .toggle-button').hide();   $('#home_header2 .desktop-menu').hide();  $(`${blockIdentifier} .mob-menu-content`).addClass('show');  $(`${blockIdentifier} .navbar-close`).hide();   setNavbarVisibility();   };    const switchToHorizontal = () => {  $('#home_header2 .toggle-button').show();  const parentElement = $(blockIdentifier).parent();  const verticalHolder = $('#vertical-holder');  parentElement.css({    "display": "",    "flex-shrink": "",    "width": "",  });  if (verticalHolder.length) {    verticalHolder.css({ display: 'block' });    verticalHolder.parent().css({ display: '' });  }  $(blockIdentifier).removeClass('navbar-vertical');  $('#home_header2 .mob-menu-body').removeAttr('data-simplebar');  $(`${blockIdentifier} .navbar-close`).show();  $(`${blockIdentifier} .mob-menu-content`).removeClass('show');  $('#home_header2 .vertical-profile').hide();  $('#home_header2 .mobile-profile').show();   };    function appendStyle(filepath) {  if ($('head link[href="' + filepath + '"]').length > 0)    return;   var ele = document.createElement('link');  ele.setAttribute("type", "text/css");  ele.setAttribute("rel", "Stylesheet");  ele.setAttribute("href", filepath);  $('head').append(ele);   }    function appendScript(filePath, callback) {  if ($('head script[src="' + filePath + '"]').length > 0) {    if (callback) {   setTimeout(callback, 100);    }    return;  }   const ds = document.createElement('script');  ds.setAttribute("type", "text/javascript");  ds.setAttribute("src", filePath);   ds.onload = () => {    if (callback) {   callback();    }  };   document.head.appendChild(ds);   }    appendStyle('https://unpkg.com/simplebar@5.3.6/dist/simplebar.css');   appendScript('https://unpkg.com/simplebar@5.3.6/dist/simplebar.min.js');    $('#home_header2 .navbar-toggler-icon').on('click', function () {  $('#home_header2 .mob-menu-content').addClass('show');   });    $('#home_header2 .navbar-close').on('click', function () {  $('#home_header2 .mob-menu-content').removeClass('show');   });    oneButtonView($(window));    $(window).on('resize', function () {  var win = $(this);  oneButtonView(win)   });    /* close the mobile menu */   $('#home_header2 .mob-menu-body a').click(function () {  if ($(this).attr('aria-controls')) {    return;  }  $('#home_header2 .mob-menu-content').removeClass('show');   });    var bgColor = window.getComputedStyle(document.querySelector('nav#home_header2'), null).getPropertyValue('background-color');   if (lightOrDark(bgColor) === 'dark') {  $('nav#home_header2').removeClass('navbar-light');  $('nav#home_header2').addClass('navbar-dark');   $('#home_header2 .navbar-close i').css('color', '#ffffff');   $('#home_header2 .arrow').css('border-left', '2px solid #ffffff');  $('#home_header2 .arrow').css('border-top', '2px solid #ffffff');   }   profileIconSizeCalculation();   $('#home_header2 a.dropdown-item').hover(function () {  $(this).css('background-color', bgColor);   });    $('#home_header2 .navbar-nav .dropdown-menu').css('background-color', bgColor);   $('#home_header2 .mob-menu-content').css('background-color', bgColor);   $('#home_header2 .link').css('background-color', bgColor);     function lightOrDark(color) {   /* Variables for red, green, blue values */  var r, g, b, hsp;   /* Check the format of the color, HEX or RGB? */  if (color.match(/^rgb/)) {     /* If HEX --> store the red, green, blue values in separate variables */    color = color.match(/^rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*(\d+(?:\.\d+)?))?\)$/);     r = color[1];    g = color[2];    b = color[3];  } else {     /* If RGB --> Convert it to HEX: http://gist.github.com/983661 */    color = +("0x" + color.slice(1).replace(   color.length < 5 && /./g, '$&$&'));     r = color >> 16;    g = color >> 8 & 255;    b = color & 255;  }   /* HSP (Highly Sensitive Poo) equation from http://alienryderflex.com/hsp.html */  hsp = Math.sqrt(    0.299 * (r * r) +    0.587 * (g * g) +    0.114 * (b * b)  );   /* Using the HSP value, determine whether the color is light or dark */  if (hsp > 127.5) {     return 'light';  } else {     return 'dark';  }   }    function oneButtonView(win) {  if (win.width() <= 414) {    isVertical && switchToHorizontal();    $('#home_header2 .vertical-profile').hide();     if ($('.navbar-nav').hasClass('empty-links') && $('.navbar-nav').hasClass('one-button')) {   if (!$('.profile-dropdown-toggle').length) {     $('#home_header2 .desktop-menu').hide();     $('#home_header2 .toggle-button').show();   }    }  }  if (win.width() <= 992 && win.width() > 414) {    isVertical && switchToHorizontal();    $('#home_header2 .vertical-profile').hide();     if ($('.navbar-nav').hasClass('empty-links') && $('.navbar-nav').hasClass('one-button')) {   $('#home_header2 .desktop-menu').show();   $('#home_header2 .toggle-button').hide();    }  }  if (win.width() <= 992) {    if ($('.navbar-nav').hasClass('empty-links') && $('.navbar-nav').hasClass('empty-buttons')) {   $('#home_header2 .desktop-menu').show();   $('#home_header2 .toggle-button').hide();    }  }   if (win.width() > 768 && isVertical) {    switchToVertical();  }   }    function signout() {  deleteCookie('jwtToken');  window.location.href = '/';   }    function deleteCookie(name) {  document.cookie = name + "=;path=/; expires=Thu, 01 Jan 1970 00:00:00 UTC;" + 'SameSite=None; Secure';   }     function profileIconInitialization() {  let loggedInUser = window['logged_in_user'];  if(loggedInUser) {     let avatarUrl;    if(loggedInUser['softr_user_profile_picture_mapped_field'] && loggedInUser[loggedInUser['softr_user_profile_picture_mapped_field']]) {   const avatar = loggedInUser[loggedInUser['softr_user_profile_picture_mapped_field']];   avatarUrl = (avatar[0].thumbnails && avatar[0].thumbnails.large.url) || avatar[0].url;   $('#home_header2 .nav-link').css('background-image', 'url(\'' + avatarUrl + '\')');   $('#home_header2 .nav-link').addClass('profile-icons');    } else if(loggedInUser['softr_user_full_name']) {   avatarUrl = extractUserNameFirstLetters(loggedInUser && loggedInUser['softr_user_full_name']);   $('#home_header2 .nav-link').text(avatarUrl);   $('#home_header2 .nav-link').addClass('profile-letters');    }   }  /*do not do anything, dummy image is here*/   }      function profileIconSizeCalculation() {  const headerLinks = document.querySelector('nav#home_header2 .nav-item a');  if (!headerLinks) {    return;  }  const fSize = window.getComputedStyle(headerLinks, null).getPropertyValue('font-size');  if (fSize <= '16px') {    $('#home_header2 .nav-item.dropdown a.profile-dropdown-toggle').css({   'width': '31px',   'height': '31px',    });  } else if (fSize > '16px' && fSize <= '24px') {    $('#home_header2 .nav-item.dropdown a.profile-dropdown-toggle').css({   'width': '34px',   'height': '34px',    });  } else {    $('#home_header2 .nav-item.dropdown a.profile-dropdown-toggle').css({   'width': '38px',   'height': '38px',    });  }   }    $("a[href='action:signout']").click(function (event) {  event.preventDefault();  signout();   });     function extractUserNameFirstLetters(fullName) {  const userName = fullName.trim().replace(/\s+/g, ' ').split(' ');  let avatarLetters;  let pattern = new RegExp('^[a-z]+', 'i');  let filteredUsername= userName.filter((item) => pattern.test(item));  filteredUsername = filteredUsername.length === 0 ? userName : filteredUsername;   if (filteredUsername.length === 1) {    avatarLetters = filteredUsername[0].length === 1 ? filteredUsername[0][0] : filteredUsername[0][0] + filteredUsername[0][1]  } else {    avatarLetters = filteredUsername[0][0] + filteredUsername[1][0];  }  return avatarLetters;   }  })(); 
+window['hero2'] = {}; ;(function () {   appendScript('https://cdn.jsdelivr.net/npm/typed.js@2.0.11', startTyping);  startTyping();   appendScript('https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.0/lity.min.js');  appendStyle('https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.0/lity.min.css');   function appendScript(filePath, callback) {   if ($('head script[src="' + filePath + '"]').length > 0) {    if (callback) {       setTimeout(callback, 100);    }    return;   }    var ds = document.createElement('script');   ds.setAttribute("type", "text/javascript");   ds.setAttribute("src", filePath);    ds.onload = () => {    if (callback) callback();   };    document.head.appendChild(ds);  }   function appendStyle(filepath) {   if ($('head link[href="' + filepath + '"]').length > 0)    return;    var ele = document.createElement('link');   ele.setAttribute("type", "text/css");   ele.setAttribute("rel", "Stylesheet");   ele.setAttribute("href", filepath);   $('head').append(ele);  }   function startTyping() {   setTimeout(() => {    const value = $('#hero2 #typed').attr('data-value').split(',');    if(window['Typed']) {      if(window['hero2_Typed']) {      window['hero2_Typed'].destroy();     }      window['hero2_Typed'] = new Typed('#hero2 #typed', {      typeSpeed: parseInt('60'),      backSpeed: parseInt('30'),      loop: true,      smartBackspace: true,      showCursor: false,      cursorChar: "|",      backDelay: 750,      strings: value     });    }   }, 1000);  }   function isInStudio() {   return window.location.href.startsWith('http://localhost:') ||    window.location.href.includes('https://studio-staging') ||    window.location.href.startsWith('https://studio.softr.io/')  }  })(); 
+window['feature-grid2'] = {}; 
+window['feature3'] = {}; ;(function () {     const feature = '#feature3 .s-feature-box';   activateFeature($('#feature3 .s-feature-box').eq(0));    $(feature).click(function (e) {  $('#feature3 .s-feature-box').each(function (i) {    $(this).removeClass('active')  });   activateFeature($(this));    });    function activateFeature(feature) {  const src = feature.attr('data-img');  const classes = feature.attr('data-img-classes');  const alt = feature.attr('data-img-alt');    $('#feature3-display-img').addClass('d-none');  $('#feature3-display-img').removeClass();  $('#feature3-display-img').addClass(classes);  $('#feature3-display-img').attr('src', src);  $('#feature3-display-img').attr('alt', alt);   feature.addClass('active');   }    })(); 
+window['faq1'] = {}; ; (function () {    var bgColor = window.getComputedStyle(document.querySelector('#faq1-accordion span'), null).getPropertyValue('background-color');  if(lightOrDark(bgColor) === 'dark') {   $('#faq1 .arrow').css('border-left', '2px solid #ffffff');   $('#faq1 .arrow').css('border-top', '2px solid #ffffff');  }   function lightOrDark(color) {    /* Variables for red, green, blue values */   var r, g, b, hsp;    /* Check the format of the color, HEX or RGB? */   if (color.match(/^rgb/)) {     /* If HEX --> store the red, green, blue values in separate variables */    color = color.match(/^rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*(\d+(?:\.\d+)?))?\)$/);     r = color[1];    g = color[2];    b = color[3];   }   else {     /* If RGB --> Convert it to HEX: http://gist.github.com/983661 */    color = +("0x" + color.slice(1).replace(     color.length < 5 && /./g, '$&$&'));     r = color >> 16;    g = color >> 8 & 255;    b = color & 255;   }    /* HSP (Highly Sensitive Poo) equation from http://alienryderflex.com/hsp.html */   hsp = Math.sqrt(    0.299 * (r * r) +    0.587 * (g * g) +    0.114 * (b * b)   );    /* Using the HSP value, determine whether the color is light or dark */   if (hsp > 127.5) {     return 'light';   }   else {     return 'dark';   }  }  })();  
+window['cta1'] = {}; 
+window['home_footer1'] = {}; 
+
+        </script>
+
+        
+        
+
+        <script src="./static/iframeResizer.contentWindow.js" crossorigin="anonymous"></script>
+
+        <script>
+          /** this function is called from list blocks (do not delete) **/
+          function openSwModal(url, size) {
+            MicroModal.init({
+              disableScroll: true,
+              awaitOpenAnimation: true,
+              awaitCloseAnimation: true
+            });
+
+            MicroModal.show("sw-modal");
+
+            const modalElem = document.querySelector('#sw-modal-content');
+            let loadingElem = modalElem.querySelector('.sw-modal-loading');
+
+            if (!loadingElem) {
+              modalElem.innerHTML += `<i class="sw-modal-loading fas fa-sync"></i>`;
+              loadingElem = modalElem.querySelector('.sw-modal-loading');
+              loadingElem.style.animation = 'rotation 900ms infinite linear';
+              loadingElem.style.position = 'absolute';
+            }
+
+            const iframeElem = document.querySelector(".sw-modal-iframe");
+            iframeElem.onload = function () {
+              loadingElem?.remove();
+            };
+
+            const viewModeParam = "viewMode=modal";
+            const modalUrl = (url.indexOf("?") !== -1) ? url + "&" + viewModeParam : url + "?" + viewModeParam;
+            iframeElem.setAttribute("src", modalUrl);
+
+            switch (size) {
+              case 'sm':
+                iframeElem.style.width = '340px';
+                iframeElem.style.height = '420px';
+                break;
+              case 'md':
+                iframeElem.style.width = '520px';
+                iframeElem.style.height = '520px';
+                break;
+              case 'lg':
+                iframeElem.style.width = '640px';
+                iframeElem.style.height = '640px';
+                break;
+              default:
+                iframeElem.style.width = '520px';
+                iframeElem.style.height = '520px';
+                break;
+            }
+          }
+        </script>
+
+        <!-- Modal HTML -->
+        <div id="sw-modal" class="sw-modal" aria-hidden="true">
+            <div class="sw-modal-overlay">
+                <div tabindex="-1" class="sw-modal-container">
+                    <div role="dialog" aria-modal="true" aria-labelledby="micromodal-title">
+                        <button aria-label="Close modal" class="sw-modal-close" onclick="MicroModal.close(&#39;sw-modal&#39;)"></button>
+                        <div id="sw-modal-content">
+                            <iframe class="sw-modal-iframe" src="./static/saved_resource.html"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    
+
+
+</body><loom-container id="lo-engage-ext-container"><loom-shadow classname="resolved"></loom-shadow></loom-container><loom-container id="lo-companion-container"><loom-shadow classname="resolved"></loom-shadow></loom-container></html>
